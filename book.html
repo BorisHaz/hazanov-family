@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Hazanov Family — Children's Book</title>
+<title>The Khazan Family — Children's Book</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#fdf6e3;color:#3a2a1a;font-family:'Georgia',serif;min-height:100vh}
@@ -27,7 +27,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,246,227,
 .chapter::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#e8c86a,#f0a030,#e8c86a)}
 .chapter-header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
 .ch-emoji{font-size:3rem;line-height:1}
-.ch-meta{}
 .ch-num{font-size:.75rem;color:#b08040;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
 .ch-title{font-size:1.25rem;color:#5a3a0a;font-weight:bold}
 .chapter p{line-height:1.9;color:#4a3a2a;font-size:.97rem;margin-bottom:14px}
@@ -53,145 +52,127 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,246,227,
     <div class="nav-right"><a href="memorial.html" id="nav-mem">Memorial →</a></div>
   </div>
 </nav>
-
 <div class="book-container">
   <div class="book-hero">
     <div class="big-emoji">⭐</div>
-    <h1 id="hero-title">A Family That Remembered</h1>
-    <p class="sub" id="hero-sub">The true story of the Hazanov family</p>
+    <h1 id="hero-title">A Family That Never Gave Up</h1>
+    <p class="sub" id="hero-sub">The true story of the Khazan family</p>
   </div>
-
   <div class="chapters-nav" id="chapters-nav"></div>
   <div id="chapters-list"></div>
-
   <div class="back-top"><a href="#" id="back-top-link">↑ Back to top</a></div>
 </div>
-
 <script>
 const CHAPTERS = {
-  en: [
-    {num:1, emoji:"🏠", title:"A City by the Sea",
-     body:"Once upon a time, in a city called Mariupol, right beside the sparkling Azov Sea, there lived a family called Hazanov. Viktor was the father, Katya was the mother, and their little boy was named Izya. They lived near Viktor's parents — Grandpa Lev and Grandma Mira — and Viktor's two brothers, Boris and Yan.\n\nMariupol was a lively place, full of ships and seagulls and the smell of the sea. The Hazanov family had lived there for a long, long time. It was their home, and they loved it."},
-    {num:2, emoji:"🌍", title:"When the World Changed",
-     body:"In 1941, when Izya was still small, a war came to their city. Soldiers from far away marched in with guns and flags, and they had very cruel rules. One of their cruelest rules said that Jewish families — families like the Hazanovs — were not safe anymore.\n\nViktor and Katya were frightened, but they stayed close together. They held Izya's hands tight and kept the family near."},
-    {num:3, emoji:"📢", title:"The Announcement",
-     body:"One morning in October, soldiers put up signs all over the city. The signs said that all Jewish people must come to a certain place and bring food for a few days. The soldiers said they would be taken somewhere safe.\n\nViktor and Katya did not know if this was true, but they had no choice. All the families in the neighbourhood gathered — grandpas and grandmas, mamas and papas, children carrying little bundles. Viktor held his parents close. Katya held Izya's hand."},
-    {num:4, emoji:"🚶", title:"The Long Walk",
-     body:"Two days later, the soldiers made everyone walk out of the city. There were thousands and thousands of people — a great long line that stretched as far as you could see.\n\nIt was cold, and people carried their belongings. Katya held Izya against her so he would stay warm. Viktor walked right beside his parents, Grandpa Lev and Grandma Mira. His brothers Boris and Yan were just ahead.\n\nGrandpa Lev kept saying quietly: \"It will be all right. You will see.\""},
-    {num:5, emoji:"😰", title:"A Dangerous Place",
-     body:"The long line of people was taken to a place outside the city called Agrobaza. There were wide ditches in the ground that had been dug very deep.\n\nThis is the part of the story that is very hard and very sad. The soldiers did terrible things there. They hurt the Jewish people. They hurt Grandma Mira, and Boris, and Yan.\n\nThis was one of the worst things that happened in the whole war. We remember it so we never forget how important it is to be kind and protect one another."},
-    {num:6, emoji:"🌌", title:"Katya's Courage",
-     body:"Katya was pushed toward the edge of a ditch. She fell — and she lay very, very still. She kept Izya under her arms and did not let go, no matter what.\n\nShe lay there without moving, even though she was terrified. She waited and waited. She heard German voices. Then silence. Then the darkness of night came.\n\nWhen everything was quiet and still, Katya slowly, carefully moved. She lifted Izya. He was alive. She climbed out of the ditch — and she ran."},
-    {num:7, emoji:"🏃", title:"Viktor's Escape",
-     body:"Viktor had found a small gap in the fence at the edge of the terrible place. He squeezed through it and hid in the long grass of the fields. He lay there all night under the stars, not knowing if Katya and Izya were safe.\n\nHis heart ached for his family — for his parents and brothers he had lost. But he kept breathing. He kept thinking: I must find Katya. I must find Izya."},
-    {num:8, emoji:"🤝", title:"Kind Strangers",
-     body:"Viktor found a neighbour — a woman who was not Jewish — who was very brave. She hid Viktor in her home for several days, even though it was dangerous for her to do so. She fed him and kept him safe.\n\nKatya and little Izya walked through fields in the dark. They walked and walked until they reached a village. A Ukrainian family opened their door. \"Come in,\" they said. \"You are safe here.\" They hid Katya and Izya and took care of them."},
-    {num:9, emoji:"🔍", title:"Searching for Each Other",
-     body:"For many weeks, Viktor searched. He moved carefully, always watching, always hoping. Katya also waited and hoped, keeping Izya close.\n\nAnd then — one day — they found each other.\n\nViktor and Katya held each other and cried. Izya was there too. They were together again. After everything that had happened, they were together."},
-    {num:10, emoji:"🛤️", title:"The Road East",
-     body:"The little family could not stay in Mariupol. It was not safe. So they travelled east, away from the soldiers, away from the war, toward places where they could be free.\n\nGrandpa Lev had also escaped that terrible day — he got out with Viktor. But Grandpa Lev had been through too much. He became ill, and a few months later, he passed away peacefully. They missed him very much.\n\nGrandma Mira, Boris, and Yan did not come with them. They are remembered every single day."},
-    {num:11, emoji:"💛", title:"Why We Remember",
-     body:"Viktor and Katya, when they grew old, made sure to tell this story to their children, and their grandchildren, and anyone who would listen.\n\n\"We survived,\" Viktor would say. \"That is not a lucky thing to keep to yourself. It means you must remember for those who cannot. You must say their names.\"\n\nTheir names were: Lev, Mira, Boris, and Yan. Say them out loud. Those words are a little light for them."},
-    {num:12, emoji:"🌟", title:"A Family Forever",
-     body:"The Hazanov family went on. Izya grew up. He had children. Those children had children. And all of them carry the story — the story of a family that loved each other, that held hands on a terrible day, and that found each other again.\n\nThis book is for you — whoever is reading it. So you know that even in the darkest times, people found courage, people helped strangers, and love was stronger than fear.\n\n✦ Remember them. ✦"}
-  ],
-  ru: [
-    {num:1, emoji:"🏠", title:"Город у моря",
-     body:"Жила-была семья Хазановых в городе Мариуполе, на берегу сверкающего Азовского моря. Виктор был отцом, Катя — матерью, а их маленький мальчик носил имя Изя. Рядом жили дедушка Лев и бабушка Мира — родители Виктора — и его два брата: Борис и Ян.\n\nМариуполь был оживлённым городом, полным кораблей, чаек и запаха моря. Семья Хазановых жила здесь давным-давно. Это был их дом, и они любили его всем сердцем."},
-    {num:2, emoji:"🌍", title:"Когда мир изменился",
-     body:"В 1941 году, когда Изя был ещё маленьким, в их город пришла война. Солдаты из далёких краёв вошли с ружьями и флагами и принесли с собой очень жестокие правила. Одно из самых жестоких правил гласило: еврейские семьи — такие как Хазановы — больше не в безопасности.\n\nВиктор и Катя боялись, но держались вместе. Они крепко держали Изю за руки и не отпускали семью от себя."},
-    {num:3, emoji:"📢", title:"Объявление",
-     body:"Однажды октябрьским утром солдаты развесили по всему городу объявления. В них говорилось, что все евреи должны явиться в назначенное место и взять еду на несколько дней. Солдаты сказали, что людей отвезут в безопасное место.\n\nВиктор и Катя не знали, правда ли это, но выбора не было. Все семьи из округи собрались вместе — дедушки и бабушки, мамы и папы, дети с маленькими узелками. Виктор держал родителей рядом. Катя держала Изю за руку."},
-    {num:4, emoji:"🚶", title:"Долгий путь",
-     body:"Через два дня солдаты погнали всех из города. Людей было тысячи и тысячи — длинная-длинная вереница, которой не было видно конца.\n\nБыло холодно, люди несли свои вещи. Катя прижимала к себе Изю, чтобы ему было теплее. Виктор шёл рядом с родителями — дедушкой Лёвой и бабушкой Мирой. Братья Борис и Ян шли чуть впереди.\n\nДедушка Лёва тихонько повторял: «Всё будет хорошо. Вот увидишь»."},
-    {num:5, emoji:"😰", title:"Страшное место",
-     body:"Длинную колонну людей привели за город, в место, которое называлось Агробаза. Там были вырыты глубокие широкие рвы.\n\nЭта часть истории очень тяжёлая и очень грустная. Солдаты сделали там страшные вещи. Они причинили вред еврейским людям. Они забрали бабушку Миру, Бориса и Яна.\n\nЭто было одним из самых страшных событий всей войны. Мы помним об этом, чтобы никогда не забыть: как важно быть добрыми и защищать друг друга."},
-    {num:6, emoji:"🌌", title:"Катин подвиг",
-     body:"Катю толкнули к краю рва. Она упала — и застыла совершенно неподвижно. Она держала Изю в руках и не отпускала его, что бы ни происходило вокруг.\n\nОна лежала, не шевелясь, хотя было очень страшно. Она ждала и ждала. Слышала немецкие голоса. Потом тишина. Потом наступила ночная темнота.\n\nКогда всё стихло, Катя медленно, осторожно пошевелилась. Подняла Изю. Он был жив. Она выбралась из рва — и побежала."},
-    {num:7, emoji:"🏃", title:"Побег Виктора",
-     body:"Виктор нашёл небольшую щель в ограждении на краю того страшного места. Он протиснулся через неё и спрятался в высокой траве на полях. Он пролежал там всю ночь под звёздами, не зная, живы ли Катя и Изя.\n\nСердце его болело по семье — по родителям и братьям, которых он потерял. Но он продолжал дышать. Продолжал думать: я должен найти Катю. Я должен найти Изю."},
-    {num:8, emoji:"🤝", title:"Добрые незнакомцы",
-     body:"Виктор нашёл соседку — нееврейскую женщину, очень смелую. Она спрятала Виктора у себя дома на несколько дней, хотя это было для неё опасно. Она кормила его и защищала.\n\nКатя с маленьким Изей шли через поля в темноте. Шли и шли, пока не добрались до деревни. Украинская семья открыла им дверь. «Входите, — сказали они. — Здесь вы в безопасности». Они спрятали Катю и Изю и заботились о них."},
-    {num:9, emoji:"🔍", title:"В поисках друг друга",
-     body:"Много недель Виктор искал. Он двигался осторожно, всегда настороже, всегда надеясь. Катя тоже ждала и надеялась, держа Изю рядом.\n\nИ вот — однажды — они нашли друг друга.\n\nВиктор и Катя обнялись и заплакали. Рядом был Изя. Они снова были вместе. После всего, что произошло, они были вместе."},
-    {num:10, emoji:"🛤️", title:"Дорога на восток",
-     body:"Маленькая семья не могла остаться в Мариуполе. Это было небезопасно. Они отправились на восток — прочь от солдат, прочь от войны, туда, где можно было жить свободно.\n\nДедушка Лёва тоже спасся в тот страшный день — вместе с Виктором. Но дедушка Лёва пережил слишком много. Он заболел и несколько месяцев спустя тихо ушёл из жизни. По нему очень скучали.\n\nБабушка Мира, Борис и Ян не пошли с ними. Их вспоминают каждый день."},
-    {num:11, emoji:"💛", title:"Зачем мы помним",
-     body:"Виктор и Катя, когда состарились, рассказывали эту историю своим детям, внукам и всем, кто хотел слушать.\n\n«Мы выжили, — говорил Виктор. — Это не то, что можно держать при себе. Это значит: ты должен помнить за тех, кто не может. Ты должен называть их по именам».\n\nИх имена: Лев, Мира, Борис и Ян. Скажи их вслух. Эти слова — маленький свет для них."},
-    {num:12, emoji:"🌟", title:"Семья навсегда",
-     body:"Семья Хазановых продолжила жить. Изя вырос. У него появились дети. У тех детей появились свои дети. И все они несут в себе эту историю — историю семьи, которая любила друг друга, держалась за руки в страшный день и снова нашла друг друга.\n\nЭта книга — для тебя, тот, кто её читает. Чтобы ты знал: даже в самые тёмные времена люди находили смелость, помогали незнакомцам, и любовь была сильнее страха.\n\n✦ Помни их. ✦"}
-  ],
-  he: [
-    {num:1, emoji:"🏠", title:"עיר על שפת הים",
-     body:"היה היה משפחה בשם חזנוב, שחיה בעיר מריופול, על חוף ים אזוב הנוצץ. ויקטור היה האב, קטיה הייתה האם, וילדם הקטן נקרא איזיה. בקרבתם גרו סבא לב וסבתא מירה — הוריו של ויקטור — ושני אחיו, בוריס ויאן.\n\nמריופול הייתה מקום שוקק חיים, מלא ספינות, שחפים וריח הים. משפחת חזנוב חיה שם מזה זמן רב מאוד. זה היה ביתם, והם אהבו אותו."},
-    {num:2, emoji:"🌍", title:"כשהעולם השתנה",
-     body:"בשנת 1941, כשאיזיה היה עוד קטן, הגיעה מלחמה לעירם. חיילים מארצות רחוקות נכנסו עם רובים ודגלים, ואיתם הביאו חוקים אכזריים מאוד. אחד החוקים האכזריים ביותר אמר שמשפחות יהודיות — כמו משפחת חזנוב — אינן בטוחות יותר.\n\nויקטור וקטיה פחדו, אך נשארו צמודים זה לזה. הם אחזו ביד איזיה חזק חזק ושמרו על המשפחה קרובה."},
-    {num:3, emoji:"📢", title:"ההכרזה",
-     body:"בוקר אחד באוקטובר תלו החיילים שלטים בכל רחבי העיר. השלטים אמרו שכל היהודים חייבים להגיע למקום מסוים ולהביא אוכל לכמה ימים. החיילים אמרו שייקחו אותם למקום בטוח.\n\nויקטור וקטיה לא ידעו אם זה אמת, אך לא הייתה להם ברירה. כל המשפחות מהסביבה התאספו — סבים וסבתות, אמהות ואבות, ילדים עם חבילות קטנות. ויקטור החזיק את הוריו קרוב. קטיה אחזה ביד איזיה."},
-    {num:4, emoji:"🚶", title:"הצעדה הארוכה",
-     body:"יומיים לאחר מכן גרשו החיילים את כולם מחוץ לעיר. היו אלפים ואלפים של אנשים — שורה ארוכה ארוכה שאי אפשר היה לראות את קצה.\n\nהיה קר, ואנשים נשאו את חפציהם. קטיה לחצה את איזיה אליה כדי שיהיה לו חם. ויקטור הלך ממש ליד הוריו — סבא לב וסבתא מירה. אחיו בוריס ויאן הלכו ממש לפניהם.\n\nסבא לב המשיך לומר בשקט: «יהיה בסדר. תראה»."},
-    {num:5, emoji:"😰", title:"מקום מסוכן",
-     body:"שורת האנשים הארוכה הובלה למקום מחוץ לעיר שנקרא אגרובזה. שם היו תעלות רחבות שנחפרו עמוק מאוד בקרקע.\n\nזה החלק בסיפור שקשה מאוד ועצוב מאוד. החיילים עשו שם דברים נוראים. הם פגעו בבני המשפחה היהודית. הם לקחו את סבתא מירה, את בוריס ואת יאן.\n\nזה היה אחד הדברים הנוראים ביותר שקרו בכל המלחמה. אנחנו זוכרים את זה כדי לא לשכוח לעולם כמה חשוב להיות טובים ולהגן זה על זה."},
-    {num:6, emoji:"🌌", title:"האומץ של קטיה",
-     body:"קטיה נדחפה לכיוון שפת התעלה. היא נפלה — ושכבה שקטה לגמרי, לגמרי. היא שמרה את איזיה בזרועותיה ולא שחררה אותו, לא משנה מה קרה סביבה.\n\nהיא שכבה ללא תנועה, אף על פי שהייתה מפוחדת נורא. היא המתינה והמתינה. שמעה קולות בגרמנית. אחר כך שקט. אחר כך ירד חשכת לילה.\n\nכשהכל נדם, קטיה זזה לאט לאט, בזהירות. הרימה את איזיה. הוא היה בחיים. היא טיפסה מהתעלה — ורצה."},
-    {num:7, emoji:"🏃", title:"הבריחה של ויקטור",
-     body:"ויקטור מצא פרצה קטנה בגדר בשולי המקום הנורא ההוא. הוא התרחק ממנה בזחילה והסתתר בעשב הגבוה של השדות. הוא שכב שם כל הלילה תחת הכוכבים, מבלי לדעת אם קטיה ואיזיה בחיים.\n\nליבו כאב על משפחתו — על ההורים והאחים שאיבד. אבל הוא המשיך לנשום. המשיך לחשוב: אני חייב למצוא את קטיה. אני חייב למצוא את איזיה."},
-    {num:8, emoji:"🤝", title:"זרים טובים",
-     body:"ויקטור מצא שכנה — אישה שלא הייתה יהודייה — שהייתה אמיצה מאוד. היא הסתירה את ויקטור בביתה למשך כמה ימים, אף שהיה בכך סכנה עבורה. היא האכילה אותו ושמרה עליו.\n\nקטיה ואיזיה הקטן הלכו דרך שדות בחשכה. הם הלכו והלכו עד שהגיעו לכפר. משפחה אוקראינית פתחה להם את הדלת. «היכנסו,» אמרו. «כאן אתם בטוחים». הם הסתירו את קטיה ואיזיה ודאגו להם."},
-    {num:9, emoji:"🔍", title:"לחפש זה את זה",
-     body:"במשך שבועות רבים חיפש ויקטור. הוא התקדם בזהירות, תמיד ערני, תמיד מקווה. גם קטיה המתינה וקיוותה, משמרת את איזיה קרוב אליה.\n\nואז — יום אחד — הם מצאו זה את זה.\n\nויקטור וקטיה חיבקו זה את זה ובכו. איזיה היה שם גם הוא. הם היו שוב יחד. אחרי הכל שעבר עליהם, הם היו יחד."},
-    {num:10, emoji:"🛤️", title:"הדרך מזרחה",
-     body:"המשפחה הקטנה לא יכלה להישאר במריופול. זה לא היה בטוח. אז הם נסעו מזרחה — הרחק מהחיילים, הרחק מהמלחמה, לעבר מקומות שבהם אפשר היה להיות חופשיים.\n\nסבא לב גם הוא ניצל באותו יום נורא — ברח יחד עם ויקטור. אבל סבא לב עבר יותר מדי. הוא חלה, וכמה חודשים לאחר מכן נפטר בשקט. התגעגעו אליו מאוד.\n\nסבתא מירה, בוריס ויאן לא באו איתם. זוכרים אותם כל יום."},
-    {num:11, emoji:"💛", title:"למה אנחנו זוכרים",
-     body:"ויקטור וקטיה, כשהתבגרו, דאגו לספר את הסיפור הזה לילדיהם, לנכדיהם ולכל מי שרצה להקשיב.\n\n«שרדנו,» היה ויקטור אומר. «זה לא משהו שאפשר לשמור לעצמך. זה אומר שאתה חייב לזכור עבור אלה שלא יכולים. אתה חייב לומר את שמותיהם».\n\nשמותיהם הם: לב, מירה, בוריס ויאן. אמור אותם בקול רם. המילים האלה הן אור קטן עבורם."},
-    {num:12, emoji:"🌟", title:"משפחה לנצח",
-     body:"משפחת חזנוב המשיכה. איזיה גדל. נולדו לו ילדים. לאותם ילדים נולדו ילדים משלהם. וכולם נושאים את הסיפור הזה — סיפורה של משפחה שאהבה זה את זה, שאחזה ידיים ביום נורא, ושמצאה זה את זה שוב.\n\nהספר הזה הוא בשבילך — מי שקורא אותו עכשיו. כדי שתדע שאפילו בזמנים הכי חשוכים, אנשים מצאו אומץ, עזרו לזרים, ואהבה הייתה חזקה יותר מפחד.\n\n✦ זכור אותם. ✦"}
-  ]
+en:[
+  {num:1,emoji:"🏠",title:"A Family by the Sea",
+   body:"In the city of Mariupol, on the shore of the sparkling Azov Sea, there lived a family called Khazan. The father was Lev, a strong and clever man. The mother was Mira, kind and warm. They had five children: Viktor, the eldest, who was nearly grown up. Katya, who was sixteen. Izya, who was twelve. Borya, who was nine. And little Yan, who was only three years old.\n\nThe Khazan family had come from a Jewish farming village called Sladkovodnaya and had settled in Mariupol in the 1930s. It was their home, and they loved it."},
+  {num:2,emoji:"⚔️",title:"When War Came",
+   body:"In 1941, a terrible war reached their city. Soldiers marched in with guns, and they had cruel rules that said Jewish families were not safe.\n\nViktor, the eldest son, was brave. He volunteered to go and fight far away, near the city of Leningrad, to help protect his country. He left before the worst things happened — and his family was proud of him, even though they missed him very much."},
+  {num:3,emoji:"📢",title:"The Gathering",
+   body:"One October morning, soldiers put up notices all over the city. They said every Jewish person must come to a certain corner of the city and bring food for a few days. They promised everyone would be taken somewhere safe to work.\n\nLev, Mira, Katya, Izya, Borya, and little Yan gathered together. Thousands of other families came too — grandparents, parents, children, babies. Nobody knew yet what was really going to happen."},
+  {num:4,emoji:"🚶",title:"The Road to Agrobaza",
+   body:"Two days later, the soldiers made everyone walk out of the city. Mira and the two youngest boys — nine-year-old Borya and three-year-old Yan — were put onto trucks with the other mothers and small children. Lev, Katya, and Izya walked in the long column of thousands of people.\n\nThe October rain fell softly. Lev walked beside his children. Nobody spoke much. They had no idea where the trucks had taken Mira and the little boys."},
+  {num:5,emoji:"😔",title:"The Terrible Place",
+   body:"The column was marched to a place called Agrobaza, outside the city. There were long, wide ditches dug deep into the earth.\n\nThis part of the story is very hard and sad. The soldiers did terrible things there. They took groups of people, a hundred at a time, away from the barn where everyone waited. Katya's group was also marched out. On the road, they saw a child's little scarf lying on the ground. A small boot. A tiny hat. Everyone understood.\n\nMira, Borya, and Yan were among those killed that day. This was one of the worst things that happened in the whole war, and we remember it so we never forget."},
+  {num:6,emoji:"🌙",title:"Papa Breaks the Door",
+   body:"Katya's group was marched back to the barn as darkness fell. The soldiers locked the door.\n\nAt about three in the morning, when people had grown quiet, Papa Lev did something extraordinary. He was a resourceful man — the kind who finds a way. Together with another man, he began pushing and pulling at the barn door. The guard was gone. Slowly, the door gave way.\n\n\"Run,\" he said.\n\nAbout three hundred people ran out into the dark night. German guards shouted, but the people kept running, stumbling across the dark fields toward freedom."},
+  {num:7,emoji:"🌾",title:"Hiding in the Haystack",
+   body:"By dawn, Lev, Katya, Izya, and others had reached a large haystack in the fields. They burrowed deep inside it and held very still.\n\nGerman soldiers came. They pushed their sharp bayonets through the hay, searching. But they did not find the people hiding inside.\n\nWhen the soldiers left, Lev led them out. They walked quietly toward Mariupol, staying off the roads, moving carefully through the fields."},
+  {num:8,emoji:"💔",title:"Papa's Sacrifice",
+   body:"When they reached the city, Papa Lev said he could not go home — too many people in the city knew the family and might report them.\n\nHe sent twelve-year-old Izya to quietly collect some food from their apartment. Katya went to stay with a kind neighbor, a Russian woman named Ivanova, who hid her bravely.\n\nLev went east, to a village called Samoilovka, trying to reach safety. But there, a cruel policeman found him. Izya, hiding in a cornfield nearby, saw what happened. His father was killed.\n\nIzya ran. He was twelve years old, and he was alone. But he kept going."},
+  {num:9,emoji:"🎭",title:"Katya's New Name",
+   body:"Katya needed to become invisible. With the help of kind people along the way, she got false papers with a new name: Valentina, a Greek girl. With this new identity, she was able to move through the occupied land.\n\nBut eventually she was taken to Germany to do forced labor — very hard work in terrible conditions. She worked at a brick factory from sunrise to sunset. It was frightening and exhausting. Yet even there, she found ordinary people who were kind to her in small ways, and those small kindnesses helped her survive."},
+  {num:10,emoji:"⚡",title:"Viktor's Incredible Story",
+   body:"While all this was happening, Viktor — the eldest brother, far away — was having his own extraordinary adventure.\n\nHe was captured by the enemy in 1942, wounded. He was taken to a very cruel camp called Buchenwald. It seemed like the end. But Viktor was brave and clever like his father.\n\nInside the camp, he met secret friends who were secretly organizing. They formed an underground group — a hidden team fighting back from inside the camp. Viktor became one of its leaders.\n\nOn April 11, 1945, something remarkable happened: the prisoners rose up and fought back. Viktor helped lead the attack on the guard towers. By evening, twenty thousand prisoners had freed themselves. Viktor survived."},
+  {num:11,emoji:"🤝",title:"Finding Each Other Again",
+   body:"After the war ended, Katya made her long way home.\n\nShe heard that Izya might be in a small village called Verkhniye Adzhakhi. She went there.\n\nA teenager was working in a yard. He looked up. He saw her. He ran inside shouting: \"Vitya! Our Katya is alive!\"\n\nIt was Izya.\n\nThey held each other and cried. They had both survived the unsurvivable. Their brother Viktor came home too, though he had to face more difficulties before he was truly free. The three of them were together again."},
+  {num:12,emoji:"🌟",title:"What They Left Behind",
+   body:"Viktor worked for the rest of his life in Mariupol, at the big Azovstal steel factory. He died in 1987 at the age of 65. Izya moved to the city of Tbilisi, and later went to Israel. Katya told her story to a writer named Lev Yarutsky, who wrote it all down so it would never be forgotten.\n\nThree members of the family did not come home: Mira, Borya, and Yan. Mira was 41. Borya was 9. Yan was 3.\n\nThis story is for you, whoever is reading it. So you know that even in the darkest times, people showed courage, helped strangers, and looked after each other. And so you say these names out loud:\n\nMira. Borya. Yan.\n\n✦ Remember them. ✦"}
+],
+ru:[
+  {num:1,emoji:"🏠",title:"Семья у моря",
+   body:"В городе Мариуполе, на берегу сверкающего Азовского моря, жила семья Хазан. Отца звали Лев — сильный и смекалистый человек. Мать звали Мира — добрая и тёплая. У них было пятеро детей: Виктор, почти уже взрослый; Катя, ей было шестнадцать; Изя, двенадцатилетний; Боря, девятилетний; и маленький Ян — ему исполнилось всего три года.\n\nСемья Хазан приехала из еврейской земледельческой колонии Сладководная и обосновалась в Мариуполе в 1930-х годах. Это был их дом, и они его любили."},
+  {num:2,emoji:"⚔️",title:"Когда пришла война",
+   body:"В 1941 году страшная война добралась до их города. Солдаты вошли с оружием и объявили жестокие правила — еврейские семьи больше не в безопасности.\n\nВиктор, старший сын, был смелым. Он добровольно пошёл на фронт — воевать далеко, под Ленинградом. Он уехал ещё до того, как случилось самое страшное. Семья им гордилась, хотя очень скучала по нему."},
+  {num:3,emoji:"📢",title:"Сбор",
+   body:"Одним октябрьским утром солдаты развесили по городу объявления: все евреи должны явиться на определённый угол улицы и взять еду на несколько дней. Всем обещали, что отвезут в безопасное место для работы.\n\nЛев, Мира, Катя, Изя, Боря и маленький Ян собрались вместе. Пришли тысячи семей — дедушки и бабушки, мамы и папы, дети, младенцы. Никто ещё не знал, что будет дальше."},
+  {num:4,emoji:"🚶",title:"Дорога на Агробазу",
+   body:"Через два дня солдаты погнали всех из города. Миру с двумя младшими мальчиками — девятилетним Борей и трёхлетним Яном — вместе с другими матерями и малышами погрузили в машины и увезли. Лев, Катя и Изя шли в длинной колонне тысяч людей.\n\nМелкий октябрьский дождь сеял с неба. Лев шёл рядом с детьми. Почти никто не разговаривал. Никто не знал, куда увезли Миру с малышами."},
+  {num:5,emoji:"😔",title:"Страшное место",
+   body:"Колонну привели на Агробазу, за город. Там были вырыты длинные глубокие рвы.\n\nЭта часть истории очень тяжёлая и грустная. Солдаты делали там страшные вещи. Из сарая, где ждали люди, уводили группами по сто человек. Группу Кати тоже вывели. На дороге лежали детский шарфик, маленький ботиночек, шапочка. Всем стало понятно.\n\nМира, Боря и Ян были среди убитых в тот день. Это было одно из самых страшных событий всей войны. Мы помним о нём, чтобы никогда не забыть."},
+  {num:6,emoji:"🌙",title:"Папа выламывает дверь",
+   body:"С наступлением темноты группу Кати погнали обратно в сарай. Солдаты закрыли дверь.\n\nОколо трёх часов ночи, когда люди немного притихли, папа Лев совершил удивительный поступок. Он был человек смелый и сметливый — из тех, кто всегда найдёт выход. Вместе с ещё одним мужчиной он начал нажимать и тянуть дверь сарая. Часового не было. Дверь поддалась.\n\n«Бегите», — сказал он.\n\nОколо трёхсот человек выбежали в ночную темноту. Немецкие охранники кричали, но люди бежали — спотыкаясь в темноте, через поля, к свободе."},
+  {num:7,emoji:"🌾",title:"Укрытие в скирде",
+   body:"На рассвете Лев, Катя, Изя и другие добрались до большой скирды на полях и зарылись внутрь — глубоко, и замерли.\n\nПришли немецкие солдаты. Они стали протыкать сено штыками — искали беглецов. Но людей, спрятавшихся внутри, не нашли.\n\nКогда солдаты ушли, Лев вывел их наружу. Они тихо двинулись к Мариуполю — стороной от дорог, осторожно, по полям."},
+  {num:8,emoji:"💔",title:"Жертва папы",
+   body:"Добравшись до города, папа Лев сказал, что сам идти домой не может — слишком многие знают семью в лицо, могут донести.\n\nОн отправил двенадцатилетнего Изю тихонько забрать из квартиры сухари. Катя пошла к доброй соседке — русской женщине Ивановой, которая мужественно её укрыла.\n\nЛев направился на восток, в село Самойловку, пытаясь добраться до безопасного места. Но там его нашёл жестокий полицай. Изя, прятавшийся в кукурузном поле неподалёку, видел, что произошло. Его отца убили.\n\nИзя побежал. Ему было двенадцать лет, и он был один. Но он продолжал идти."},
+  {num:9,emoji:"🎭",title:"Новое имя Кати",
+   body:"Кате нужно было стать невидимкой. С помощью добрых людей на её пути она получила фальшивые документы на новое имя: Валентина, гречанка. С этой новой личностью она могла передвигаться по оккупированной земле.\n\nНо в конце концов её угнали в Германию на принудительные работы — тяжёлый труд в ужасных условиях. Кирпичный завод, от рассвета до заката. Было страшно и изматывающе. Но даже там она встречала простых людей, которые по-человечески к ней относились, и эти маленькие добрые поступки помогали выжить."},
+  {num:10,emoji:"⚡",title:"Удивительная история Виктора",
+   body:"Пока всё это происходило, Виктор — старший брат, далеко — переживал собственное невероятное приключение.\n\nВ 1942 году, раненым, он попал в плен. Его привезли в очень жестокий лагерь под названием Бухенвальд. Казалось — это конец. Но Виктор был смелым и сметливым, как его отец.\n\nВ лагере он встретил тайных друзей, которые тайно объединялись. Они создали подпольную группу — скрытую команду, которая боролась изнутри. Виктор стал одним из её руководителей.\n\n11 апреля 1945 года произошло нечто удивительное: заключённые восстали и дали отпор. Виктор помогал вести атаку на сторожевые башни. К вечеру двадцать тысяч заключённых освободили себя сами. Виктор выжил."},
+  {num:11,emoji:"🤝",title:"Снова вместе",
+   body:"Когда война закончилась, Катя долго добиралась домой.\n\nОна узнала, что Изя, возможно, в маленьком селе Верхние Аджахи. Она поехала туда.\n\nВо дворе возился подросток. Он поднял голову. Увидел её. Кинулся в дом с криком: «Витя! Наша Катя жива!»\n\nЭто был Изя.\n\nОни обнялись и заплакали. Оба выжили там, где, казалось, выжить невозможно. Брат Виктор тоже вернулся домой — хотя ему пришлось преодолеть ещё немало трудностей. Все трое снова были вместе."},
+  {num:12,emoji:"🌟",title:"Что они оставили после себя",
+   body:"Виктор до конца жизни работал в Мариуполе, на большом сталелитейном заводе «Азовсталь». Умер в 1987 году в возрасте 65 лет. Изя переехал в Тбилиси, а позже уехал в Израиль. Катя рассказала свою историю писателю Льву Яруцкому, который записал всё слово в слово, чтобы оно не было забыто.\n\nТрое из семьи не вернулись домой: Мира, Боря и Ян. Мире было 47 лет. Боре — 9. Яну — 3.\n\nЭта книга — для тебя, кто её читает. Чтобы ты знал: даже в самые тёмные времена люди проявляли смелость, помогали незнакомцам и берегли друг друга. И чтобы ты произнёс эти имена вслух:\n\nМира. Боря. Ян.\n\n✦ Помни их. ✦"}
+],
+he:[
+  {num:1,emoji:"🏠",title:"משפחה על שפת הים",
+   body:"בעיר מריופול, על חוף ים אזוב הנוצץ, חיה משפחה בשם חזן. האב שמו לב — איש חזק ותושייתי. האם שמה מירה — טובת לב וחמה. היו להם חמישה ילדים: ויקטור, הבכור, כמעט מבוגר; קטיה, בת שש עשרה; איזיה, בן שתים עשרה; בוריה, בן תשע; ויאן הקטן — בן שלוש בלבד.\n\nמשפחת חזן הגיעה מכפר חקלאי יהודי בשם סלדקובודנאיה, והתיישבה במריופול בשנות השלושים. זה היה ביתם, והם אהבו אותו."},
+  {num:2,emoji:"⚔️",title:"כשהמלחמה הגיעה",
+   body:"בשנת 1941 הגיעה מלחמה נוראה לעירם. חיילים נכנסו עם נשק וחוקים אכזריים — משפחות יהודיות אינן בטוחות יותר.\n\nויקטור, הבן הבכור, היה אמיץ. הוא התנדב ללכת להילחם רחוק, ליד לנינגרד, כדי להגן על ארצו. הוא עזב לפני שקרו הדברים הנוראים ביותר. המשפחה גאתה בו, אף שגעגעה אליו מאוד."},
+  {num:3,emoji:"📢",title:"ההתכנסות",
+   body:"בוקר אחד באוקטובר תלו החיילים מודעות בכל העיר: כל יהודי חייב להגיע לפינה מסוימת ולהביא אוכל לכמה ימים. הבטיחו לכולם שייקחו אותם למקום בטוח לעבודה.\n\nלב, מירה, קטיה, איזיה, בוריה ויאן הקטן התכנסו יחד. אלפי משפחות נוספות הגיעו — סבים, הורים, ילדים, תינוקות. איש עוד לא ידע מה יקרה."},
+  {num:4,emoji:"🚶",title:"הדרך לאגרובזה",
+   body:"יומיים אחר כך גרשו החיילים את כולם מחוץ לעיר. מירה עם שני הבנים הקטנים — בוריה בן התשע ויאן בן השלוש — הועלו על משאיות יחד עם אמהות אחרות וילדים קטנים. לב, קטיה ואיזיה צעדו בטור הארוך של אלפי אנשים.\n\nגשם סתוי קל ירד. לב צעד ליד ילדיו. כמעט איש לא דיבר. איש לא ידע לאן לקחו את מירה עם הקטנים."},
+  {num:5,emoji:"😔",title:"המקום הנורא",
+   body:"הטור הובל לאגרובזה, מחוץ לעיר. שם היו תעלות ארוכות וחפורות עמוק באדמה.\n\nזה החלק הקשה והעצוב בסיפור. החיילים עשו שם דברים נוראים. מהאסם שבו המתינו האנשים, הוציאו קבוצות של מאה איש. גם הקבוצה של קטיה הוצאה. על הדרך ראו צעיף ילד, מגף קטן, כובעון. כולם הבינו.\n\nמירה, בוריה ויאן היו בין הנרצחים באותו יום. זה היה אחד הדברים הנוראים ביותר שקרו במלחמה כולה. אנחנו זוכרים זאת כדי לא לשכוח לעולם."},
+  {num:6,emoji:"🌙",title:"אבא פורץ את הדלת",
+   body:"עם רדת החשכה הוחזרה הקבוצה של קטיה לאסם. החיילים נעלו את הדלת.\n\nבשעה שלוש לפנות בוקר, כשהאנשים נרגעו מעט, אבא לב עשה משהו יוצא דופן. הוא היה איש של תושייה — מהסוג שתמיד מוצא דרך. יחד עם עוד גבר אחד, הוא החל לדחוף ולמשוך את דלת האסם. השומר לא היה שם. הדלת נכנעה.\n\n\"רוצו\", אמר.\n\nכשלוש מאות איש ברחו אל חשכת הלילה. שומרים גרמניים צעקו, אך האנשים המשיכו לרוץ — מכשכשים בשדות החשוכים לעבר החירות."},
+  {num:7,emoji:"🌾",title:"מסתתרים בגדיש",
+   body:"עם שחר הגיעו לב, קטיה, איזיה ואחרים לגדיש גדול בשדות. הם נקברו עמוק בתוכו ולא זזו.\n\nחיילים גרמניים הגיעו. הם דקרו את הגדיש בכידונות — חיפשו. אך לא מצאו את מי שהסתתר בפנים.\n\nכשהחיילים עזבו, הוציא אותם לב החוצה. הם הלכו בשקט לעבר מריופול — הרחק מהכבישים, בזהירות, דרך השדות."},
+  {num:8,emoji:"💔",title:"הקרבתו של אבא",
+   body:"כשהגיעו לעיר, אמר אבא לב שאינו יכול ללכת הביתה — יותר מדי אנשים בעיר מכירים את המשפחה ועשויים לדווח עליהם.\n\nהוא שלח את איזיה בן השתים-עשרה לאסוף בשקט אוכל מהדירה. קטיה הלכה לגור אצל שכנה טובה — אישה רוסייה בשם איוונובה, שהסתירה אותה באומץ.\n\nלב פנה מזרחה, לכפר סאמויילובקה, בניסיון להגיע למקום בטוח. אך שם מצא אותו שוטר אכזרי. איזיה, שהסתתר בשדה תירס קרוב, ראה מה קרה. אביו נרצח.\n\nאיזיה ברח. הוא היה בן שתים עשרה, לבדו. אך הוא המשיך ללכת."},
+  {num:9,emoji:"🎭",title:"השם החדש של קטיה",
+   body:"קטיה הייתה צריכה להפוך לבלתי נראית. בעזרת אנשים טובים שפגשה בדרכה, השיגה מסמכים מזויפים עם שם חדש: ולנטינה, ילדה יוונית. עם זהות חדשה זו יכלה לנוע בשטח הכבוש.\n\nאך בסוף גורשה לגרמניה לעבודת כפייה — עבודה קשה מאוד בתנאים נוראים. מפעל לבנים, מעלות השחר עד החשכה. זה היה מפחיד ומתיש. ועם זאת, גם שם פגשה אנשים פשוטים שהיו אדיבים אליה, ואותן אדיבויות קטנות עזרו לה לשרוד."},
+  {num:10,emoji:"⚡",title:"הסיפור המדהים של ויקטור",
+   body:"בעוד כל זה קורה, ויקטור — האח הבכור, רחוק — חי הרפתקה יוצאת דופן משלו.\n\nב-1942 נפל בשבי, פצוע. הוביאו אותו למחנה נורא בשם בוכנוואלד. נראה היה שזה הסוף. אך ויקטור היה אמיץ ותושייתי כמו אביו.\n\nבמחנה פגש חברים סודיים שהתארגנו בחשאי. הם הקימו קבוצת מחתרת — צוות נסתר שנלחם מבפנים. ויקטור הפך לאחד ממנהיגיה.\n\nב-11 באפריל 1945 קרה משהו מדהים: האסירים קמו ונלחמו. ויקטור עזר להנהיג את המתקפה על מגדלי השמירה. עד הערב שחררו עצמם עשרים אלף אסירים. ויקטור שרד."},
+  {num:11,emoji:"🤝",title:"מציאים זה את זה שוב",
+   body:"כשהמלחמה נגמרה, קטיה עשתה דרך ארוכה חזרה הביתה.\n\nהיא שמעה שאיזיה אולי נמצא בכפר קטן בשם וורחני אדז'אכי. היא נסעה לשם.\n\nנער עבד בחצר. הוא הגביה עיניים. ראה אותה. רץ פנימה וצעק: \"ויטיה! קטיה שלנו חיה!\"\n\nזה היה איזיה.\n\nהם חיבקו זה את זה ובכו. שניהם שרדו את הבלתי-ניתן להישרדות. אחיהם ויקטור גם הוא חזר הביתה, אף שהיה עליו להתמודד עם עוד קשיים לפני שהיה חופשי באמת. שלושתם היו שוב יחד."},
+  {num:12,emoji:"🌟",title:"מה שהותירו אחריהם",
+   body:"ויקטור עבד כל ימיו במריופול, במפעל הפלדה הגדול אזובסטל. נפטר ב-1987 בגיל 65. איזיה עבר לטביליסי, ואחר כך עלה לישראל. קטיה סיפרה את סיפורה לסופר בשם לב יארוצקי, שרשם הכל מילה במילה כדי שלא ייאמר.\n\nשלושה מבני המשפחה לא חזרו הביתה: מירה, בוריה ויאן. מירה הייתה בת 41. בוריה בן 9. יאן בן 3.\n\nהספר הזה הוא בשבילך, מי שקורא אותו. כדי שתדע: אפילו בזמנים החשוכים ביותר, אנשים גילו אומץ, עזרו לזרים ושמרו זה על זה. וכדי שתאמר את השמות האלה בקול רם:\n\nמירה. בוריה. יאן.\n\n✦ זכור אותם. ✦"}
+]
 };
-
-const UI = {
-  en:{"nav-home":"← Home","nav-title":"📖 Children's Book","nav-mem":"Memorial →","hero-title":"A Family That Remembered","hero-sub":"The true story of the Hazanov family","back-top-link":"↑ Back to top"},
-  ru:{"nav-home":"← Главная","nav-title":"📖 Детская книга","nav-mem":"Мемориал →","hero-title":"Семья, которая помнила","hero-sub":"Настоящая история семьи Хазановых","back-top-link":"↑ Наверх"},
-  he:{"nav-home":"→ דף הבית","nav-title":"📖 ספר הילדים","nav-mem":"← אַזְכָּרָה","hero-title":"משפחה שזכרה","hero-sub":"הסיפור האמיתי של משפחת חזנוב","back-top-link":"↑ חזרה למעלה"}
+const UI={
+  en:{"nav-home":"← Home","nav-title":"📖 Children's Book","nav-mem":"Memorial →","hero-title":"A Family That Never Gave Up","hero-sub":"The true story of the Khazan family","back-top-link":"↑ Back to top"},
+  ru:{"nav-home":"← Главная","nav-title":"📖 Детская книга","nav-mem":"Мемориал →","hero-title":"Семья, которая не сдавалась","hero-sub":"Настоящая история семьи Хазан","back-top-link":"↑ Наверх"},
+  he:{"nav-home":"→ דף הבית","nav-title":"📖 ספר הילדים","nav-mem":"← אַזְכָּרָה","hero-title":"משפחה שלא נכנעה","hero-sub":"הסיפור האמיתי של משפחת חזן","back-top-link":"↑ חזרה למעלה"}
 };
-
-function setLang(l, btn) {
-  localStorage.setItem('hlang', l);
-  document.documentElement.lang = l;
-  document.documentElement.dir = l === 'he' ? 'rtl' : 'ltr';
-  document.querySelectorAll('.lang-btns button').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  else document.getElementById('btn-' + l).classList.add('active');
-
-  const u = UI[l];
-  Object.keys(u).forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = u[id];
-  });
-
-  const chs = CHAPTERS[l];
-  const nav = document.getElementById('chapters-nav');
-  nav.innerHTML = chs.map(c =>
-    `<a href="#ch${c.num}">${c.emoji} ${c.num}. ${c.title}</a>`
-  ).join('');
-
-  const list = document.getElementById('chapters-list');
-  list.innerHTML = chs.map(c =>
+function setLang(l,btn){
+  localStorage.setItem('hlang',l);
+  document.documentElement.lang=l;
+  document.documentElement.dir=l==='he'?'rtl':'ltr';
+  document.querySelectorAll('.lang-btns button').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  else document.getElementById('btn-'+l).classList.add('active');
+  const u=UI[l];
+  Object.keys(u).forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=u[id];});
+  const chs=CHAPTERS[l];
+  document.getElementById('chapters-nav').innerHTML=chs.map(c=>`<a href="#ch${c.num}">${c.emoji} ${c.num}. ${c.title}</a>`).join('');
+  document.getElementById('chapters-list').innerHTML=chs.map(c=>
     `<div class="chapter" id="ch${c.num}">
       <div class="chapter-header">
         <div class="ch-emoji">${c.emoji}</div>
-        <div class="ch-meta">
+        <div>
           <div class="ch-num">Chapter ${c.num}</div>
           <div class="ch-title">${c.title}</div>
         </div>
       </div>
-      ${c.body.split('\n\n').map(p => `<p>${p}</p>`).join('')}
+      ${c.body.split('\n\n').map(p=>`<p>${p}</p>`).join('')}
     </div>`
   ).join('<div class="page-divider">✦ ✦ ✦</div>');
 }
-
-const saved = localStorage.getItem('hlang') || 'en';
-setLang(saved);
+setLang(localStorage.getItem('hlang')||'en');
 </script>
 </body>
 </html>
