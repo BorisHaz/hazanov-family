@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hazanov Family Memorial</title>
+<title>Khazan Family Memorial</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#0f0f1a;color:#e8e0d0;font-family:'Georgia',serif;min-height:100vh}
@@ -60,265 +60,204 @@
     <div class="nav-right"><a href="book.html" id="nav-book">Children's Book →</a></div>
   </div>
 </nav>
-
 <div class="layout">
 <aside id="sidebar">
   <div class="aside-head" id="aside-chapters">Chapters</div>
   <a href="#intro" id="s1">I. Introduction</a>
   <a href="#family" id="s2">II. The Family</a>
-  <a href="#oct17" id="s3">III. October 17</a>
-  <a href="#oct19" id="s4">IV. October 19</a>
-  <a href="#march" id="s5">V. The March</a>
-  <a href="#agrobaza" id="s6">VI. At Agrobaza</a>
-  <a href="#katya" id="s7">VII. Katya's Account</a>
-  <a href="#escape" id="s8">VIII. The Escape</a>
-  <a href="#flight" id="s9">IX. Flight &amp; Remembrance</a>
-  <a href="#tree" id="s10">✦ Family Tree</a>
+  <a href="#assembly" id="s3">III. The Assembly Order</a>
+  <a href="#march" id="s4">IV. The March</a>
+  <a href="#agrobaza" id="s5">V. At Agrobaza</a>
+  <a href="#escape" id="s6">VI. The Night Escape</a>
+  <a href="#lev" id="s7">VII. The Death of Lev</a>
+  <a href="#katya" id="s8">VIII. Katya's Journey</a>
+  <a href="#viktor" id="s9">IX. Viktor at Buchenwald</a>
+  <a href="#after" id="s10">X. After the War</a>
+  <a href="#tree" id="s11">✦ Family</a>
 </aside>
-
 <main>
 <div class="hero">
   <div class="flame">🕯️</div>
-  <h1 id="hero-title">Hazanov Family Memorial</h1>
+  <h1 id="hero-title">Khazan Family Memorial</h1>
   <p class="subtitle" id="hero-sub">Mariupol, Ukraine — October 1941</p>
 </div>
-
-<div class="chapter" id="intro">
-  <h2 id="c1-title">I. Introduction</h2>
-  <p id="c1-body"></p>
-</div>
-<div class="chapter" id="family">
-  <h2 id="c2-title">II. The Family</h2>
-  <p id="c2-body"></p>
-</div>
-<div class="chapter" id="oct17">
-  <h2 id="c3-title">III. October 17, 1941</h2>
-  <p id="c3-body"></p>
-  <blockquote id="c3-quote"></blockquote>
-</div>
-<div class="chapter" id="oct19">
-  <h2 id="c4-title">IV. October 19, 1941</h2>
-  <p id="c4-body"></p>
-  <blockquote id="c4-quote"></blockquote>
-</div>
-<div class="chapter" id="march">
-  <h2 id="c5-title">V. The March</h2>
-  <p id="c5-body"></p>
-  <blockquote id="c5-quote"></blockquote>
-</div>
-<div class="chapter" id="agrobaza">
-  <h2 id="c6-title">VI. At Agrobaza</h2>
-  <p id="c6-body"></p>
-</div>
-<div class="chapter" id="katya">
-  <h2 id="c7-title">VII. Katya's Account</h2>
-  <p id="c7-body"></p>
-  <blockquote id="c7-quote"></blockquote>
-</div>
-<div class="chapter" id="escape">
-  <h2 id="c8-title">VIII. The Escape</h2>
-  <p id="c8-body"></p>
-</div>
-<div class="chapter" id="flight">
-  <h2 id="c9-title">IX. Flight &amp; Remembrance</h2>
-  <p id="c9-body"></p>
-  <blockquote id="c9-quote"></blockquote>
-</div>
-
+<div class="chapter" id="intro"><h2 id="c1-t"></h2><p id="c1-b"></p></div>
+<div class="chapter" id="family"><h2 id="c2-t"></h2><p id="c2-b"></p></div>
+<div class="chapter" id="assembly"><h2 id="c3-t"></h2><p id="c3-b"></p><blockquote id="c3-q"></blockquote></div>
+<div class="chapter" id="march"><h2 id="c4-t"></h2><p id="c4-b"></p></div>
+<div class="chapter" id="agrobaza"><h2 id="c5-t"></h2><p id="c5-b"></p><blockquote id="c5-q"></blockquote></div>
+<div class="chapter" id="escape"><h2 id="c6-t"></h2><p id="c6-b"></p><blockquote id="c6-q"></blockquote></div>
+<div class="chapter" id="lev"><h2 id="c7-t"></h2><p id="c7-b"></p></div>
+<div class="chapter" id="katya"><h2 id="c8-t"></h2><p id="c8-b"></p><blockquote id="c8-q"></blockquote></div>
+<div class="chapter" id="viktor"><h2 id="c9-t"></h2><p id="c9-b"></p><blockquote id="c9-q"></blockquote></div>
+<div class="chapter" id="after"><h2 id="c10-t"></h2><p id="c10-b"></p></div>
 <div class="divider">✦ ✦ ✦</div>
-
 <div class="family-tree" id="tree">
-  <h2 id="tree-title">Family Tree</h2>
+  <h2 id="tree-title">The Khazan Family</h2>
   <div class="members" id="members-grid"></div>
 </div>
 </main>
 </div>
-
 <script>
 const T = {
-  en: {
-    "nav-home":"← Home","nav-title":"MEMORIAL","nav-book":"Children's Book →",
-    "aside-chapters":"Chapters",
-    "s1":"I. Introduction","s2":"II. The Family","s3":"III. October 17",
-    "s4":"IV. October 19","s5":"V. The March","s6":"VI. At Agrobaza",
-    "s7":"VII. Katya's Account","s8":"VIII. The Escape","s9":"IX. Flight & Remembrance","s10":"✦ Family Tree",
-    "hero-title":"Hazanov Family Memorial",
-    "hero-sub":"Mariupol, Ukraine — October 1941",
-    "c1-title":"I. Introduction",
-    "c1-body":"This testimony was recorded to preserve the memory of the Hazanov family of Mariupol and the events of October 1941, when German forces systematically murdered the Jewish population of the city. What follows is the account of Viktor Hazanov and his wife Katya — survivors who carried these memories for the rest of their lives. It is told so that those who came after them will never forget.",
-    "c2-title":"II. The Family",
-    "c2-body":"The Hazanov family lived in Mariupol, a port city on the Sea of Azov in eastern Ukraine. Viktor and Katya had built a life there with their son Izya. Viktor's parents — Lev and Mira — also lived in the city, as did his brothers Boris and Yan. The family was close-knit, rooted in the community, and had known Mariupol as home for generations.",
-    "c3-title":"III. October 17, 1941",
-    "c3-body":"On October 17, 1941, German occupying authorities issued an order requiring all Jewish residents of Mariupol to report to a designated assembly point. The announcement was made with assurances of relocation to a work settlement. Families packed what they could carry. Viktor, Katya, and Izya gathered with Viktor's parents Lev and Mira, and his brothers Boris and Yan. They did not know it would be the last time the full family would stand together.",
-    "c3-quote":"\"We were told to bring food for three days and warm clothing. People believed it. They had to believe something.\"",
-    "c4-title":"IV. October 19, 1941",
-    "c4-body":"Two days later, on October 19, the assembled Jews were marched out of the city under armed guard. The column stretched for blocks — thousands of men, women, children, and the elderly. German soldiers and local collaborators lined the route. Those who fell behind were beaten. The direction of the march became clear only as they reached the outskirts: they were being taken toward the ravines at Agrobaza, several kilometers from the city center.",
-    "c4-quote":"\"There were so many of us. I held Izya's hand the entire way. I did not let go.\" — Katya",
-    "c5-title":"V. The March",
-    "c5-body":"The march lasted several hours. People carried bundles, children, elderly parents. The October air was cold. Guards shouted at anyone who slowed. At the edges of the column, some people attempted to break away and were shot. The sound of shooting was constant. Viktor held close to his parents, trying to shield them. Katya kept Izya pressed against her. Boris and Yan walked just ahead.",
-    "c5-quote":"\"My father Lev kept saying: it will be all right. Even then. He kept saying it.\" — Viktor",
-    "c6-title":"VI. At Agrobaza",
-    "c6-body":"At Agrobaza, the column was herded into a fenced area beside large anti-tank ditches that had been dug earlier. People were stripped of valuables and documents. The shootings began. German Einsatzgruppen and their auxiliaries worked methodically. The screaming, then silence — then screaming again as the next group was brought forward. Boris and Yan were taken. Lev and Mira were taken. Viktor and Katya, separated in the chaos, each witnessed the murders of people around them. How they survived the initial selection was a matter of chance, confusion, and moments that neither could fully explain in words.",
-    "c7-title":"VII. Katya's Account",
-    "c7-body":"Katya was pushed to the edge of the ditch with a group of women. She fell — or was pushed — and lay beneath bodies, Izya pressed beneath her. She lay still. She could not move. The shooting above her continued. She heard voices in German. Then silence. Then a long darkness. When she finally moved, it was night. She pulled Izya up. He was alive. She climbed out of the ditch and ran.",
-    "c7-quote":"\"I cannot explain it. I only know Izya was alive and I ran toward the field.\" — Katya",
-    "c8-title":"VIII. The Escape",
-    "c8-body":"Viktor had broken away from the column in the chaos at Agrobaza, crawling through a gap in the perimeter fence. He hid in the fields overnight, not knowing if Katya and Izya had survived. By morning he moved toward the outskirts of the city. He found shelter with a non-Jewish neighbor who hid him at great personal risk for several days. Katya and Izya, moving at night across fields, found their way to a village outside the city. A Ukrainian family took them in. The two groups — Viktor, and Katya with Izya — did not find each other for several weeks.",
-    "c9-title":"IX. Flight &amp; Remembrance",
-    "c9-body":"The family eventually reunited and fled east, away from occupied territory. Lev Hazanov, who had survived the ditch alongside Viktor, escaped with him but died months later from illness and the physical toll of that day. Mira, Boris, and Yan did not survive. Of the extended family gathered on October 17, only Viktor, Katya, Izya, and Lev — for a short time — made it out. Viktor and Katya carried this testimony as a duty: to speak for those who could not. The 33,771 Jews of Mariupol were murdered in the ravines of Agrobaza on October 19 and 20, 1941.",
-    "c9-quote":"\"We survived. That is not a comfort — it is a responsibility. To remember them by name.\" — Viktor Hazanov",
-    "tree-title":"The Hazanov Family",
-    members: [
-      {name:"Viktor Hazanov",role:"Son, Survivor",status:"survived",icon:"👨"},
-      {name:"Katya Hazanov",role:"Viktor's wife, Survivor",status:"survived",icon:"👩"},
-      {name:"Izya Hazanov",role:"Their son, Survivor",status:"survived",icon:"👦"},
-      {name:"Lev Hazanov",role:"Viktor's father — survived the ditch, died months later",status:"perished",icon:"👴"},
-      {name:"Mira Hazanov",role:"Viktor's mother",status:"perished",icon:"👵"},
-      {name:"Boris Hazanov",role:"Viktor's brother",status:"perished",icon:"🕯️"},
-      {name:"Yan Hazanov",role:"Viktor's brother",status:"perished",icon:"🕯️"}
-    ],
-    survived:"✅ Survived",perished:"🕯️ Perished"
-  },
-  ru: {
-    "nav-home":"← Главная","nav-title":"МЕМОРИАЛ","nav-book":"Детская книга →",
-    "aside-chapters":"Главы",
-    "s1":"I. Вступление","s2":"II. Семья","s3":"III. 17 октября",
-    "s4":"IV. 19 октября","s5":"V. Марш","s6":"VI. На Агробазе",
-    "s7":"VII. Рассказ Кати","s8":"VIII. Побег","s9":"IX. Бегство и память","s10":"✦ Семейное дерево",
-    "hero-title":"Мемориал семьи Хазановых",
-    "hero-sub":"Мариуполь, Украина — Октябрь 1941",
-    "c1-title":"I. Вступление",
-    "c1-body":"Это свидетельство было записано, чтобы сохранить память о семье Хазановых из Мариуполя и событиях октября 1941 года, когда немецкие войска систематически уничтожали еврейское население города. Это рассказ Виктора Хазанова и его жены Кати — выживших, которые несли эту память всю оставшуюся жизнь. Оно записано, чтобы те, кто пришёл после них, никогда не забыли.",
-    "c2-title":"II. Семья",
-    "c2-body":"Семья Хазановых жила в Мариуполе — портовом городе на берегу Азовского моря на востоке Украины. Виктор и Катя обустроили здесь жизнь вместе с сыном Изей. Родители Виктора — Лев и Мира — тоже жили в городе, как и его братья Борис и Ян. Семья была дружной, укоренившейся в городской жизни и считала Мариуполь своим домом на протяжении поколений.",
-    "c3-title":"III. 17 октября 1941 года",
-    "c3-body":"17 октября 1941 года немецкие оккупационные власти издали приказ, обязывающий всё еврейское население Мариуполя явиться в назначенное место сбора. Объявление сопровождалось обещаниями переселения в трудовое поселение. Семьи собирали то, что могли унести. Виктор, Катя и Изя встретились с родителями Виктора — Львом и Мирой — и его братьями Борисом и Яном. Они не знали, что это последний раз, когда вся семья стоит вместе.",
-    "c3-quote":"«Нам сказали взять еду на три дня и тёплую одежду. Люди верили. Им нужно было во что-то верить.»",
-    "c4-title":"IV. 19 октября 1941 года",
-    "c4-body":"Двое суток спустя, 19 октября, собранных евреев под вооружённым конвоем вывели за пределы города. Колонна растянулась на несколько кварталов — тысячи мужчин, женщин, детей и стариков. По обеим сторонам стояли немецкие солдаты и местные коллаборационисты. Тех, кто отставал, избивали. Куда ведут, стало ясно лишь на окраине: людей гнали к оврагам Агробазы, в нескольких километрах от центра.",
-    "c4-quote":"«Нас было так много. Я всю дорогу держала Изю за руку. Не отпускала.» — Катя",
-    "c5-title":"V. Марш",
-    "c5-body":"Марш длился несколько часов. Люди несли узлы, детей, пожилых родителей. В октябрьском воздухе было холодно. Конвоиры кричали на каждого, кто замедлял шаг. На краях колонны некоторые пытались вырваться — их расстреливали. Выстрелы не умолкали. Виктор держался рядом с родителями, стараясь защитить их. Катя прижимала к себе Изю. Борис и Ян шли чуть впереди.",
-    "c5-quote":"«Папа всё время говорил: всё будет хорошо. Даже тогда. Всё время говорил.» — Виктор",
-    "c6-title":"VI. На Агробазе",
-    "c6-body":"На Агробазе колонну загнали в огороженный участок у больших противотанковых рвов, вырытых заранее. Людей лишали ценностей и документов. Начались расстрелы. Немецкие айнзацгруппы и их пособники работали методично. Крики, затем тишина — затем снова крики, когда подводили следующую группу. Бориса и Яна увели. Льва и Миру увели. Виктора и Катю разлучила суматоха, и каждый из них стал свидетелем убийств вокруг. Как они уцелели в первоначальном отборе — случай, неразбериха и мгновения, которые ни один из них не мог объяснить словами.",
-    "c7-title":"VII. Рассказ Кати",
-    "c7-body":"Катю оттеснили к краю рва вместе с группой женщин. Она упала — или её толкнули — и лежала под телами, прижав Изю к себе. Она лежала не двигаясь. Она не могла пошевелиться. Стрельба над ней не прекращалась. Слышались голоса на немецком. Потом тишина. Потом долгая темнота. Когда она наконец пошевелилась, была ночь. Она подняла Изю. Он был жив. Она вылезла из рва и побежала.",
-    "c7-quote":"«Я не могу это объяснить. Я знаю только, что Изя был жив, и я побежала в поле.» — Катя",
-    "c8-title":"VIII. Побег",
-    "c8-body":"Виктор вырвался из колонны в хаосе на Агробазе, проползя через щель в ограждении. Он провёл ночь в полях, не зная, выжили ли Катя и Изя. К утру он направился к окраинам города. Убежище ему дала нееврейская соседка, рискуя собственной жизнью, — несколько дней она его скрывала. Катя с Изей передвигались ночами через поля и добрались до деревни за городом. Украинская семья их приютила. Виктор и Катя с Изей нашли друг друга лишь спустя несколько недель.",
-    "c9-title":"IX. Бегство и память",
-    "c9-body":"Семья воссоединилась и бежала на восток, подальше от оккупированных территорий. Лев Хазанов, выживший в овраге вместе с Виктором, спасся, но скончался через несколько месяцев от болезни и последствий того дня. Мира, Борис и Ян не выжили. Из всей семьи, собравшейся 17 октября, уцелели лишь Виктор, Катя, Изя и Лев — ненадолго. Виктор и Катя считали передачу этого свидетельства своим долгом: говорить за тех, кто не мог. 33 771 еврей Мариуполя был убит в оврагах Агробазы 19–20 октября 1941 года.",
-    "c9-quote":"«Мы выжили. Это не утешение — это ответственность. Помнить их по именам.» — Виктор Хазанов",
-    "tree-title":"Семья Хазановых",
-    members: [
-      {name:"Виктор Хазанов",role:"Сын, выживший",status:"survived",icon:"👨"},
-      {name:"Катя Хазанова",role:"Жена Виктора, выжившая",status:"survived",icon:"👩"},
-      {name:"Изя Хазанов",role:"Их сын, выживший",status:"survived",icon:"👦"},
-      {name:"Лев Хазанов",role:"Отец Виктора — выжил в овраге, умер спустя месяцы",status:"perished",icon:"👴"},
-      {name:"Мира Хазанова",role:"Мать Виктора",status:"perished",icon:"👵"},
-      {name:"Борис Хазанов",role:"Брат Виктора",status:"perished",icon:"🕯️"},
-      {name:"Ян Хазанов",role:"Брат Виктора",status:"perished",icon:"🕯️"}
-    ],
-    survived:"✅ Выжил(а)",perished:"🕯️ Погиб(ла)"
-  },
-  he: {
-    "nav-home":"→ דף הבית","nav-title":"אַזְכָּרָה","nav-book":"← ספר הילדים",
-    "aside-chapters":"פרקים",
-    "s1":"א. מבוא","s2":"ב. המשפחה","s3":"ג. 17 באוקטובר",
-    "s4":"ד. 19 באוקטובר","s5":"ה. המצעד","s6":"ו. באגרובזה",
-    "s7":"ז. עדות קטיה","s8":"ח. הבריחה","s9":"ט. הפרידה והזיכרון","s10":"✦ עץ המשפחה",
-    "hero-title":"אַזְכָּרַת מִשְׁפַּחַת חַזָּנוֹב",
-    "hero-sub":"מריופול, אוקראינה — אוקטובר 1941",
-    "c1-title":"א. מבוא",
-    "c1-body":"עדות זו נרשמה כדי לשמר את זכרה של משפחת חזנוב ממריופול ואת אירועי אוקטובר 1941, עת חיסלו הכוחות הגרמניים בשיטתיות את האוכלוסייה היהודית של העיר. לפניכם עדותם של ויקטור חזנוב ואשתו קטיה — ניצולים שנשאו זיכרונות אלה כל ימי חייהם. היא נרשמה כדי שהדורות הבאים לא ישכחו לעולם.",
-    "c2-title":"ב. המשפחה",
-    "c2-body":"משפחת חזנוב חיה במריופול, עיר נמל על חוף ים אזוב במזרח אוקראינה. ויקטור וקטיה בנו שם חיים יחד עם בנם איזיה. הוריו של ויקטור — לב ומירה — גם הם גרו בעיר, וכן אחיו בוריס ויאן. המשפחה הייתה קרובה ומושרשת בקהילה, ורואה במריופול את ביתה מדורות.",
-    "c3-title":"ג. 17 באוקטובר 1941",
-    "c3-body":"ב-17 באוקטובר 1941 הוציאו הרשויות הגרמניות הכובשות צו המחייב את כל התושבים היהודים במריופול להתייצב בנקודת איסוף מוגדרת. ההכרזה נעשתה בהבטחה לעתק להתנחלות עבודה. משפחות ארזו מה שיכלו לשאת. ויקטור, קטיה ואיזיה נפגשו עם הוריו של ויקטור — לב ומירה — ועם אחיו בוריס ויאן. הם לא ידעו שזו הפעם האחרונה שכל המשפחה עומדת יחד.",
-    "c3-quote":"\"אמרו לנו להביא אוכל לשלושה ימים ובגדים חמים. אנשים האמינו. הם היו חייבים להאמין במשהו.\"",
-    "c4-title":"ד. 19 באוקטובר 1941",
-    "c4-body":"יומיים לאחר מכן, ב-19 באוקטובר, צעדו היהודים שנאספו מחוץ לעיר תחת שמירה חמושה. הטור התפרש על פני רחובות שלמים — אלפי גברים, נשים, ילדים וקשישים. חיילים גרמניים ומשתפי פעולה מקומיים הסתדרו לאורך המסלול. מי שפיגר לקה מכות. כיוון המצעד התברר רק בפאתי העיר: הם הובלו לעבר התעלות ב-אגרובזה, כמה קילומטרים ממרכז העיר.",
-    "c4-quote":"\"היינו כה רבים. החזקתי את ידו של איזיה כל הדרך. לא שיחררתי.\" — קטיה",
-    "c5-title":"ה. המצעד",
-    "c5-body":"המצעד נמשך שעות אחדות. אנשים נשאו חבילות, ילדים, הורים קשישים. אוויר אוקטובר היה קר. השומרים צעקו על כל מי שהאט. בשולי הטור ניסו חלק לברוח ונורו. קול היריות לא פסק. ויקטור נצמד להוריו, מנסה להגן עליהם. קטיה לחצה את איזיה אליה. בוריס ויאן הלכו ממש לפניהם.",
-    "c5-quote":"\"אבא לב המשיך לומר: יהיה בסדר. אפילו אז. המשיך לומר זאת.\" — ויקטור",
-    "c6-title":"ו. באגרובזה",
-    "c6-body":"באגרובזה גורש הטור לשטח מגודר ליד תעלות נגד-טנקים גדולות שנחפרו מראש. אנשים נשדדו מחפציהם ומתעודותיהם. הירי החל. יחידות האיינזצגרופן הגרמניות וסייענוהן פעלו בשיטתיות. צרחות, לאחריהן דממה — ואז שוב צרחות כשהובאה הקבוצה הבאה. בוריס ויאן נלקחו. לב ומירה נלקחו. ויקטור וקטיה נפרדו בתוהו ובוהו, כל אחד עד לרצח האנשים סביבו. כיצד שרדו את הסלקציה הראשונית — עניין של מקרה, בלבול ורגעים שאף אחד מהם לא יכול היה להסביר במילים.",
-    "c7-title":"ז. עדות קטיה",
-    "c7-body":"קטיה נדחפה לשפת התעלה עם קבוצת נשים. היא נפלה — או נדחפה — ושכבה מתחת לגופות, כשאיזיה לחוץ מתחתיה. היא שכבה ללא תנועה. היא לא יכלה להזיז אבר. הירי מעליה נמשך. שמעה קולות בגרמנית. לאחר מכן שקט. ואז חשכה ממושכת. כשסוף-סוף זזה, היה לילה. היא הרימה את איזיה. הוא היה בחיים. היא טיפסה מהתעלה וברחה.",
-    "c7-quote":"\"אני לא יכולה להסביר זאת. אני רק יודעת שאיזיה היה חי ורצתי לשדה.\" — קטיה",
-    "c8-title":"ח. הבריחה",
-    "c8-body":"ויקטור נמלט מהטור בתוהו ובוהו באגרובזה, כשהוא זוחל דרך פרצה בגדר ההיקפית. הוא התחבא בשדות לאורך הלילה, מבלי לדעת אם קטיה ואיזיה שרדו. עם בוקר נע לעבר פאתי העיר. מצא מחסה אצל שכנה לא-יהודייה שהחביאה אותו בסיכון אישי גדול למשך מספר ימים. קטיה ואיזיה, שזזו בלילות דרך שדות, הגיעו לכפר מחוץ לעיר. משפחה אוקראינית קיבלה אותם. שתי הקבוצות — ויקטור, וקטיה עם איזיה — לא מצאו זה את זה במשך כמה שבועות.",
-    "c9-title":"ט. הפרידה והזיכרון",
-    "c9-body":"המשפחה התאחדה לבסוף וברחה מזרחה, הרחק מהשטחים הכבושים. לב חזנוב, ששרד את התעלה לצד ויקטור, נמלט אך נפטר חודשים לאחר מכן ממחלה ומהתשלום הגופני של אותו היום. מירה, בוריס ויאן לא שרדו. מכל המשפחה המורחבת שהתאספה ב-17 באוקטובר, שרדו רק ויקטור, קטיה, איזיה ולב — לזמן קצר. ויקטור וקטיה נשאו עדות זו כחובה: לדבר עבור אלה שלא יכלו. 33,771 יהודי מריופול נרצחו בתעלות אגרובזה ב-19–20 באוקטובר 1941.",
-    "c9-quote":"\"שרדנו. זה אינו נחמה — זוהי אחריות. לזכור אותם בשמותיהם.\" — ויקטור חזנוב",
-    "tree-title":"משפחת חזנוב",
-    members: [
-      {name:"ויקטור חזנוב",role:"הבן, ניצול",status:"survived",icon:"👨"},
-      {name:"קטיה חזנוב",role:"אשת ויקטור, ניצולה",status:"survived",icon:"👩"},
-      {name:"איזיה חזנוב",role:"בנם, ניצול",status:"survived",icon:"👦"},
-      {name:"לב חזנוב",role:"אביו של ויקטור — שרד את התעלה, נפטר חודשים לאחר מכן",status:"perished",icon:"👴"},
-      {name:"מירה חזנוב",role:"אמו של ויקטור",status:"perished",icon:"👵"},
-      {name:"בוריס חזנוב",role:"אחיו של ויקטור",status:"perished",icon:"🕯️"},
-      {name:"יאן חזנוב",role:"אחיו של ויקטור",status:"perished",icon:"🕯️"}
-    ],
-    survived:"✅ שרד/ה",perished:"🕯️ נספה/נספתה"
-  }
+en:{
+"nav-home":"← Home","nav-title":"MEMORIAL","nav-book":"Children's Book →","aside-chapters":"Chapters",
+"s1":"I. Introduction","s2":"II. The Family","s3":"III. The Assembly Order","s4":"IV. The March",
+"s5":"V. At Agrobaza","s6":"VI. The Night Escape","s7":"VII. The Death of Lev",
+"s8":"VIII. Katya's Journey","s9":"IX. Viktor at Buchenwald","s10":"X. After the War","s11":"✦ Family",
+"hero-title":"Khazan Family Memorial","hero-sub":"Mariupol, Ukraine — October 1941",
+"c1-t":"I. Introduction",
+"c1-b":"The true family name is Khazan — not Khazanov. Viktor Lvovich Khazan himself always signed only as Khazan, resisting the Russian suffix forced on them by their surroundings. This testimony was recorded by historian Lev Yarutsky for his book Jews of Priazovye (pages 134–151), based on the account of Ekaterina (Katya) Lvovna Khazan, who was sixteen years old in October 1941. It is the story of a family from the Jewish agricultural colony of Sladkovodnaya, who settled in Mariupol in the 1930s.",
+"c2-t":"II. The Family",
+"c2-b":"Lev Isaakovich Khazan, 48, came from the colony of Sladkovodnaya. His wife Mira Ionovna, 41, was from Gulyai-Pole. Their children: Viktor, the eldest, was about 19 and had already volunteered for the front near Leningrad before the massacre — he was not in Mariupol when it happened. Katya (Ekaterina Lvovna) was 16. Izya (Ilya Lvovich), born 1929, was 12. Borya (Boris), born 1932, was 9. Yan, born 1938, was only 3 years old.",
+"c3-t":"III. The Assembly Order",
+"c3-b":"On October 8, 1941, German forces broke into Mariupol. By October 17, the occupying authorities ordered all Jewish residents to assemble at the corner of Sovetskaya and Fontannaya streets. A large courtyard was filled with thousands of people. For two days they were held in this improvised ghetto. They were told they would be sent to a work settlement in Palestine. Women with young children were told specifically that Jewish families would work and live there.",
+"c3-q":"\"They told us to bring food for three days. People believed it. They needed to believe something.\" — Katya Khazan",
+"c4-t":"IV. The March",
+"c4-b":"On October 19, the order came to march. Mira Ionovna was separated immediately: she and three-year-old Yan and nine-year-old Borya, along with other women with small children and the elderly, were loaded onto trucks and driven away. Lev, Katya, and twelve-year-old Izya walked in the general column of Mariupol's Jews, driven by German soldiers along the Mangush road in a light autumn rain. No one yet guessed where they were going.",
+"c5-t":"V. At Agrobaza",
+"c5-b":"At the settlement of Agrobaza, west of Mariupol, they were herded into a long barn. Somewhere a machine gun was firing. The Germans began pulling out groups of 100 people at a time, marching them to the anti-tank ditches that had been dug there during the war. When Katya's group — with her father Lev and brother Izya — was marched out, they saw the road littered with a child's scarf, a little boot, a small hat. No more doubt remained. They were marched to the ditch, ordered to strip of everything. Then, as dusk fell and the killing slowed, the last group was marched back to the barn. They grabbed any clothing lying near the ditch to cover themselves. Mira, Borya, and Yan had been killed earlier that day.",
+"c5-q":"\"There was a child's little boot lying on the road. That was when I understood.\" — Katya Khazan",
+"c6-t":"VI. The Night Escape",
+"c6-b":"At around three in the morning, when people had quieted somewhat, Lev Khazan — a resourceful man — together with another man whose name Katya never learned, began breaking down the barn door. The guard was apparently absent — likely drinking with others after the day's terrible work. The door gave way. About three hundred people ran out into the pitch darkness, stumbling across the steppe. German guards shouted \"Halt!\" but they kept running. By dawn they reached a large haystack and buried themselves inside it. German soldiers came and stabbed bayonets through the hay — but missed them. When the soldiers left, they crept out and moved toward Mariupol.",
+"c6-q":"\"We ran in absolute darkness. We had no idea which direction Mariupol was. Only the walls of the anti-tank ditch told us where not to go.\" — Katya Khazan",
+"c7-t":"VII. The Death of Lev",
+"c7-b":"Lev decided he could not enter Mariupol — too many people knew the family. He sent twelve-year-old Izya into the city to collect crackers they had stored at home. Katya found shelter with their neighbor, a Russian woman named Ivanova who had evacuated from Odessa and was living in the Khazan apartment on Nikolayevskaya Street, No. 45. Lev made his way to the village of Samoilovka to the east. There, two other men were hiding, all trying to reach the front lines. A local German policeman named Ybe discovered them. In the grandmother's house where they hid, he shot one man and began pulling gold teeth from the body. Lev broke through the kitchen window and ran. Izya, hiding in a cornfield nearby, watched as Ybe chased his father, knelt, carefully aimed, and fired. Lev Khazan fell dead. Several years later, Izya testified at a trial in Donetsk and identified Ybe from a photograph.",
+"c8-t":"VIII. Katya's Journey",
+"c8-b":"Katya eventually obtained false documents identifying her as Valentina Lazarevna Tovarchi, a Greek. With this new identity, she moved through occupied territory, found shelter with various families, and ultimately was taken to Germany as forced labor. She worked at a brick factory, in a Straflager (punishment camp), from dawn until dark — beatings, humiliation, exhaustion. Yet among those terrible conditions she found individual Germans who treated workers decently. After liberation, she returned to the Soviet Union and made her way back toward Ukraine.",
+"c8-q":"\"When I listen to Ekaterina Lvovna's account of her ordeals in Germany, what strikes me is not the horrors of fascist forced labor — it is the good people.\" — L. Yarutsky",
+"c9-t":"IX. Viktor at Buchenwald",
+"c9-b":"Viktor Lvovich Khazan, 19 years old in autumn 1941, was fighting near Leningrad when his mother and two small brothers were murdered at Agrobaza. In 1942 he was captured wounded and unconscious. He was taken first to Auschwitz, where he spent three months, then to Buchenwald — assigned to the Steinbruch (quarry) kommando. Seventy men carried granite and loaded wagons every day. On his fifth day he collapsed. A small prisoner slipped him a red note directing him to the camp hospital — this was German communist Heinrich Zuderland, who brought Viktor into the Buchenwald underground. Viktor moved between barracks in the evenings, building connections among Soviet POWs and political prisoners. In 1944 an informer was uncovered; the underground sentenced him. When Viktor was summoned to the \"third window\" — meaning execution — Zuderland intervened and gave him a new identity: Viktor Ivanovich Merkulov. He was transferred to a locomotive factory. He joined a sabotage group that destroyed equipment and delayed production. On April 11, 1945, at 3:15 p.m., the Buchenwald underground uprising began. According to multiple sources, Viktor Khazan commanded a battalion of Block 25 that stormed the guard towers. By 4 p.m. the SS resistance was broken. Twenty thousand prisoners had risen.",
+"c9-q":"\"Young man, you have honorably passed the test.\" — Stalinist interrogator, after seven days of questioning Viktor as a suspected American spy upon his return",
+"c10-t":"X. After the War",
+"c10-b":"After liberation, Viktor returned to the Soviet Union and was immediately taken by Stalinist secret police (GBists) in Stalino (Donetsk), accused of being an American spy. He was interrogated for seven days before being released. Katya, returning from Germany, made her way to Verkhniye Adzhakhi — and there found Izya alive. The moment is recorded simply: a teenager looked up from the yard and saw her. \"Vitya, our Katya is alive!\" he cried. Izya (later Ilya) eventually moved to Tbilisi. He fell seriously ill with leukemia and emigrated to Israel for treatment. Viktor Lvovich Khazan worked for the rest of his life at the Azovstal steel plant in Mariupol, in the blast furnace workshop. He died in 1987 at the age of 65. The three names that could not be saved — Mira, Borya, and Yan — are remembered.",
+"tree-title":"The Khazan Family",
+members:[
+  {name:"Viktor Lvovich Khazan",role:"Eldest son (19 in 1941). Fought near Leningrad; Buchenwald survivor; led the 1945 uprising. Died 1987, age 65.",status:"survived",icon:"👨"},
+  {name:"Katya (Ekaterina Lvovna)",role:"Daughter, 16 in 1941. Escaped the barn; survived forced labor in Germany; returned after the war.",status:"survived",icon:"👩"},
+  {name:"Izya (Ilya Lvovich)",role:"Son, 12 in 1941. Witnessed father's murder; testified at trial. Moved to Tbilisi; emigrated to Israel.",status:"survived",icon:"👦"},
+  {name:"Lev Isaakovich Khazan",role:"Father, 48. Broke the barn door and led ~300 to escape. Shot dead by policeman Ybe in Samoilovka.",status:"perished",icon:"👴"},
+  {name:"Mira Ionovna",role:"Mother, 41. Taken by truck with the small children to Agrobaza. Killed October 19, 1941.",status:"perished",icon:"👵"},
+  {name:"Borya (Boris)",role:"Son, 9 years old. Killed at Agrobaza, October 19, 1941.",status:"perished",icon:"🕯️"},
+  {name:"Yan",role:"Son, 3 years old. Killed at Agrobaza, October 19, 1941.",status:"perished",icon:"🕯️"}
+],
+survived:"✅ Survived",perished:"🕯️ Perished"
+},
+ru:{
+"nav-home":"← Главная","nav-title":"МЕМОРИАЛ","nav-book":"Детская книга →","aside-chapters":"Главы",
+"s1":"I. Вступление","s2":"II. Семья","s3":"III. Приказ о сборе","s4":"IV. Марш",
+"s5":"V. На Агробазе","s6":"VI. Ночной побег","s7":"VII. Гибель Льва",
+"s8":"VIII. Путь Кати","s9":"IX. Виктор в Бухенвальде","s10":"X. После войны","s11":"✦ Семья",
+"hero-title":"Мемориал семьи Хазан","hero-sub":"Мариуполь, Украина — Октябрь 1941",
+"c1-t":"I. Вступление",
+"c1-b":"Настоящая фамилия семьи — Хазан, а не Хазанов. Виктор Львович Хазан всегда сам подписывался только «Хазан», противясь русскому суффиксу, который окружающие упорно добавляли к их исконной фамилии. Это свидетельство записал краевед Лев Яруцкий для книги «Евреи Приазовья» (стр. 134–151) со слов Екатерины (Кати) Львовны Хазан, которой в октябре 1941 года было шестнадцать лет. Это история семьи из еврейской земледельческой колонии Сладководная, переселившейся в Мариуполь в 1930-х годах.",
+"c2-t":"II. Семья",
+"c2-b":"Лев Исаакович Хазан, 48 лет, уроженец колонии Сладководной. Его жена Мира Ионовна, 41 год, уроженка Гуляй-Поля. Их дети: Виктор, старший, примерно 19 лет, добровольцем ушёл на фронт под Ленинград ещё до трагедии — во время расстрела его в Мариуполе не было. Катя (Екатерина Львовна) — 16 лет. Изя (Илья Львович), 1929 года рождения, — 12 лет. Боря (Борис), 1932 года рождения, — 9 лет. Ян, 1938 года рождения, — всего 3 года.",
+"c3-t":"III. Приказ о сборе",
+"c3-b":"8 октября 1941 года гитлеровцы ворвались в Мариуполь. 17 октября оккупационные власти приказали всем евреям города явиться на угол улиц Советской и Фонтанной. Огромный двор заполнился тысячами людей. Двое суток их держали в этом импровизированном гетто. Говорили, что евреев отправят в трудовое поселение в Палестину. Женщинам с детьми особо обещали, что еврейские семьи будут там работать и жить.",
+"c3-q":"«Нам сказали взять еду на три дня. Люди верили. Им нужно было во что-то верить.» — Катя Хазан",
+"c4-t":"IV. Марш",
+"c4-b":"19 октября поступил приказ идти. Миру Ионовну отделили сразу: её с трёхлетним Яном и девятилетним Борей, вместе с другими женщинами, у которых были маленькие дети, и стариков — погрузили в машины и увезли. Лев, Катя и двенадцатилетний Изя шли в общей колонне мариупольских евреев, которую немцы гнали по мангушской дороге под мелким осенним дождём. Никто ещё не догадывался, куда их ведут.",
+"c5-t":"V. На Агробазе",
+"c5-b":"В посёлке Агробаза, к западу от Мариуполя, людей загнали в длинный сарай. Где-то стучал пулемёт. Немцы стали отбирать по сто человек и уводить их к противотанковым рвам. Когда сотню, в которую попала Катя с отцом и Изей, вывели из сарая, дорога открыла ужасающую картину: детский шарфик, маленький ботиночек, шапочка. Их заставили раздеться и погнали к месту казни. Но с наступлением сумерек расстрелы прекратились — последнюю сотню погнали обратно в сарай, позволив подобрать у рва брошенную одежду. Мира, Боря и Ян были убиты раньше, ещё днём.",
+"c5-q":"«На дороге валялся маленький детский ботиночек. Вот тогда я всё поняла.» — Катя Хазан",
+"c6-t":"VI. Ночной побег",
+"c6-b":"Часа в три ночи, когда люди немного успокоились, отец Кати Лев Хазан — человек бедовый — вместе с ещё одним мужчиной, имени которого Катя так и не узнала, начали выламывать дверь сарая. Часового, по всей видимости, не было: скорее всего, он присоединился к тем, кто после «работы» пил шнапс и самогон. Дверь поддалась. Около трёхсот человек выбежали в непроглядную темноту. Немецкие охранники кричали «Хальт!», но люди бежали. На рассвете они зарылись в большую скирду сена. Немцы пришли и стали прощупывать сено штыками — но промахивались. Когда солдаты ушли, беглецы выбрались и двинулись к Мариуполю.",
+"c6-q":"«Ночь была непроницаемо тёмной. Мы не знали, как сориентироваться. Только стены противотанкового рва подсказывали, куда не надо идти.» — Катя Хазан",
+"c7-t":"VII. Гибель Льва",
+"c7-b":"Лев решил, что в город идти нельзя — слишком многие знали семью в лицо. Он послал двенадцатилетнего Изю домой за сухарями. Катя нашла убежище у соседки — русской женщины Ивановой, эвакуированной из Одессы, жившей в квартире Хазанов на Николаевской улице, дом 45. Лев направился в село Самойловку на востоке. Там прятались ещё двое мужчин — все готовились пробираться к линии фронта. Местный полицай, немец Ябе, обнаружил их. Прямо в хате, где они укрывались, он застрелил одного человека и принялся вырывать у убитого золотые зубы. Лев выбил окно на кухне и бросился бежать. Изя, прятавшийся в будылях кукурузы поблизости, видел, как Ябе выбежал следом, опустился на одно колено, тщательно прицелился и выстрелил. Лев Хазан упал замертво. Через несколько лет Изя выступил свидетелем на суде в Донецке и опознал убийцу своего отца по фотографии.",
+"c8-t":"VIII. Путь Кати",
+"c8-b":"Катя в конце концов получила фальшивые документы на имя Валентины Лазаревны Товарчи — гречанки. С этой новой личностью она скиталась по оккупированной территории, находила приют у разных людей, а затем была угнана в Германию на принудительные работы. Кирпичный завод, штрафлагерь, работа от зари до зари — побои, унижения, изнеможение. И всё же среди этого ужаса встречались отдельные немцы, которые относились к работницам по-человечески. После освобождения Катя вернулась на Родину и добралась до Украины.",
+"c8-q":"«Слушая рассказ Екатерины Львовны о её мытарствах в Германии, меня поражают не ужасы фашистской каторги — а добрые люди.» — Л. Яруцкий",
+"c9-t":"IX. Виктор в Бухенвальде",
+"c9-b":"Виктору Львовичу Хазану было 19 лет осенью 1941 года, когда его мать и двух малолетних братьев расстреляли у противотанкового рва. Он воевал под Ленинградом. В 1942 году, раненым и в бессознательном состоянии, попал в плен. Прошёл через Освенцим (три месяца), затем — Бухенвальд, команда «Штайнбрух» (каменоломня): 70 человек, гранит, вагонетки. На пятый день упал от изнеможения. Маленький заключённый с красным треугольником передал ему записку — направление в лагерный лазарет. Это был немецкий коммунист Генрих Зюдерланд. Он ввёл Виктора в бухенвальдское подполье. По вечерам Виктор ходил по баракам, налаживал связи среди советских военнопленных и политических заключённых. В 1944 году был разоблачён осведомитель — подполье вынесло ему приговор. Виктора вызвали к «третьему окну» (то есть на смерть), но Зюдерланд успел: теперь Виктор стал Виктором Ивановичем Меркуловым. Его перевели на паровозостроительный завод. Он вступил в группу саботажа — уничтожали детали, задерживали выпуск паровозов. 11 апреля 1945 года в 15:15 началось восстание. По нескольким источникам, батальон Блока 25, которым командовал В. Л. Хазан, штурмом овладел башнями охраны и «малыми воротами» лагеря. К 16 часам сопротивление было сломлено. В восстании участвовали 20 тысяч заключённых.",
+"c9-q":"«Молодец, товарищ Хазан. Ты с честью выдержал испытание. Молодец!» — следователь сталинской госбезопасности, после семи суток допросов по обвинению в шпионаже в пользу США",
+"c10-t":"X. После войны",
+"c10-b":"После освобождения Виктор вернулся в СССР и сразу был задержан сталинскими гэбистами в Сталино (Донецке) по обвинению в шпионаже в пользу США. Семь суток допросов — затем отпустили. Катя, вернувшись из Германии, добралась до Верхних Аджах — и там нашла живого Изю. Этот момент записан просто: подросток поднял голову во дворе и кинулся в дом: «Витя, наша Катя жива!». Изя (впоследствии Илья) переехал в Тбилиси. Тяжело заболел лейкемией и эмигрировал в Израиль на лечение. Виктор Львович Хазан до конца жизни работал на «Азовстали» горновым в доменном цехе. Скончался в 1987 году в возрасте 65 лет. Три имени, которых не удалось спасти — Мира, Боря и Ян — помнят.",
+"tree-title":"Семья Хазан",
+members:[
+  {name:"Виктор Львович Хазан",role:"Старший сын (19 лет в 1941). Воевал под Ленинградом; узник Бухенвальда; руководил восстанием 1945 года. Умер в 1987 году, в 65 лет.",status:"survived",icon:"👨"},
+  {name:"Катя (Екатерина Львовна)",role:"Дочь, 16 лет в 1941. Бежала из сарая; пережила принудительный труд в Германии; вернулась после войны.",status:"survived",icon:"👩"},
+  {name:"Изя (Илья Львович)",role:"Сын, 12 лет в 1941. Видел гибель отца; давал показания на суде. Переехал в Тбилиси; эмигрировал в Израиль.",status:"survived",icon:"👦"},
+  {name:"Лев Исаакович Хазан",role:"Отец, 48 лет. Выломал дверь сарая и вывел ~300 человек. Застрелен полицаем Ябе в Самойловке.",status:"perished",icon:"👴"},
+  {name:"Мира Ионовна",role:"Мать, 41 год. Увезена на машине вместе с малолетними детьми. Убита на Агробазе 19 октября 1941 года.",status:"perished",icon:"👵"},
+  {name:"Боря (Борис)",role:"Сын, 9 лет. Убит на Агробазе 19 октября 1941 года.",status:"perished",icon:"🕯️"},
+  {name:"Ян",role:"Сын, 3 года. Убит на Агробазе 19 октября 1941 года.",status:"perished",icon:"🕯️"}
+],
+survived:"✅ Выжил(а)",perished:"🕯️ Погиб(ла)"
+},
+he:{
+"nav-home":"→ דף הבית","nav-title":"אַזְכָּרָה","nav-book":"← ספר הילדים","aside-chapters":"פרקים",
+"s1":"א. מבוא","s2":"ב. המשפחה","s3":"ג. צו ההתכנסות","s4":"ד. המצעד",
+"s5":"ה. באגרובזה","s6":"ו. בריחת הלילה","s7":"ז. מותו של לב",
+"s8":"ח. מסעה של קטיה","s9":"ט. ויקטור בבוכנוואלד","s10":"י. אחרי המלחמה","s11":"✦ משפחה",
+"hero-title":"אַזְכָּרַת מִשְׁפַּחַת חַזָּן","hero-sub":"מריופול, אוקראינה — אוקטובר 1941",
+"c1-t":"א. מבוא",
+"c1-b":"שם המשפחה האמיתי הוא חזן — לא חזנוב. ויקטור לבוביץ' חזן תמיד חתם בעצמו רק \"חזן\", ומאן בסיומת הרוסית שהוסיפו לשמם. עדות זו נרשמה על ידי ההיסטוריון לב יארוצקי לספרו \"יהודי פריאזוביה\" (עמ' 134–151), על בסיס עדותה של אקטרינה (קטיה) לבובנה חזן, שהייתה בת שש עשרה באוקטובר 1941. זהו סיפורה של משפחה ממושבה היהודית חקלאית סלדקובודנאיה, שעברה למריופול בשנות השלושים.",
+"c2-t":"ב. המשפחה",
+"c2-b":"לב איסאקוביץ' חזן, בן 48, מסלדקובודנאיה. אשתו מירה איונובנה, בת 41, מגוליאי-פולה. ילדיהם: ויקטור, הבן הבכור, כבן 19, כבר התנדב לחזית ליד לנינגרד לפני הטבח — הוא לא היה במריופול כשזה קרה. קטיה (אקטרינה לבובנה) — בת 16. איזיה (איליה לבוביץ'), יליד 1929 — בן 12. בוריה (בוריס), יליד 1932 — בן 9. יאן, יליד 1938 — בן 3 בלבד.",
+"c3-t":"ג. צו ההתכנסות",
+"c3-b":"ב-8 באוקטובר 1941 פרצו הגרמנים למריופול. ב-17 באוקטובר הורו רשויות הכיבוש לכל היהודים בעיר להתכנס בפינת רחובות סובייצקאיה ופונטאנאיה. חצר גדולה התמלאה באלפי אנשים. יומיים החזיקו אותם בגטו מאולתר זה. אמרו שיישלחו להתיישבות עבודה בפלסטין. לנשים עם ילדים קטנים הובטח במיוחד שמשפחות יהודיות יעבדו ויחיו שם.",
+"c3-q":"\"אמרו לנו להביא אוכל לשלושה ימים. אנשים האמינו. הם היו חייבים להאמין במשהו.\" — קטיה חזן",
+"c4-t":"ד. המצעד",
+"c4-b":"ב-19 באוקטובר ניתן הפקודה ללכת. מירה איונובנה הופרדה מיד: אותה עם יאן בן השלוש ובוריה בן התשע, יחד עם נשים אחרות בעלות ילדים קטנים וקשישים — הועלו על משאיות ונסעו. לב, קטיה ואיזיה בן השתים-עשרה צעדו בטור הכללי של יהודי מריופול, שגורשו על ידי חיילים גרמניים לאורך כביש מנגוש תחת גשם סתוי קל. איש עוד לא ידע לאן הולכים.",
+"c5-t":"ה. באגרובזה",
+"c5-b":"בישוב אגרובזה, מערבית למריופול, גורשו אל אסם ארוך. איפשהו הדהדה יריית מקלע. הגרמנים החלו לשלוח קבוצות של מאה איש לתעלות הנגד-טנקים שנחפרו שם. כשהקבוצה שבה הייתה קטיה עם אביה לב ואחיה איזיה הוצאה מהאסם, נגלתה תמונה נוראה: צעיף ילד, מגף קטן, כובעון. לא נשאר ספק. הם הופשטו מבגדיהם ונדחפו לכיוון מקום ההוצאה להורג. אך עם רדת החשכה הפסיקו הירי — הקבוצה האחרונה הוחזרה לאסם, ואפשרו לה להרים בגדים שנפלו ליד התעלה. מירה, בוריה ויאן נרצחו מוקדם יותר באותו יום.",
+"c5-q":"\"על הדרך הייתה מוטלת מגפה קטנה של ילד. אז הבנתי.\" — קטיה חזן",
+"c6-t":"ו. בריחת הלילה",
+"c6-b":"בשעה שלוש לפנות בוקר, כשהאנשים נרגעו מעט, אביה של קטיה, לב חזן — איש תושייה — יחד עם עוד גבר ששמו קטיה מעולם לא ידעה, החלו לפרוץ את דלת האסם. השומר כנראה לא היה במקומו — ככל הנראה הצטרף לאחרים שלאחר ה\"עבודה\" שתו שנאפס ועוד. הדלת נכנעה. כשלוש מאות איש ברחו אל החשכה הבלתי-חדירה. שומרים גרמניים צעקו \"הלט!\" אך הם המשיכו לרוץ. עם שחר נקברו בתוך גדיש גדול. חיילים גרמניים הגיעו ודקרו את הגדיש בכידונות — אך פספסו. כשעזבו, יצאו ופנו למריופול.",
+"c6-q":"\"הלילה היה חשוך לחלוטין. לא ידענו כיצד להתמצא. רק קירות תעלות הנגד-טנקים הורו לנו לאן לא ללכת.\" — קטיה חזן",
+"c7-t":"ז. מותו של לב",
+"c7-b":"לב החליט שאינו יכול להיכנס לעיר — יותר מדי אנשים הכירו את המשפחה. הוא שלח את איזיה בן השתים-עשרה לאסוף פירורים שהיו מאוחסנים בבית. קטיה מצאה מחסה אצל שכנה — אישה רוסייה בשם איוונובה שפונתה מאודסה וגרה בדירת חזן ברחוב ניקולאייבסקאיה 45. לב המשיך לכפר סאמויילובקה מזרחה. שם הסתתרו עוד שני גברים — כולם ניסו להגיע לקווי החזית. שוטר מקומי גרמני בשם יאבה גילה אותם. בבית שבו הסתתרו ירה באחד ועקר שיני זהב מגופתו. לב שבר חלון במטבח וברח. איזיה, שהסתתר בשדה תירס קרוב, ראה כיצד יאבה יצא, כרע על ברכו, כוון בזהירות וירה. לב חזן נפל מת. כמה שנים לאחר מכן העיד איזיה בבית משפט בדונייצק וזיהה את הרוצח מתצלום.",
+"c8-t":"ח. מסעה של קטיה",
+"c8-b":"בסופו של דבר השיגה קטיה מסמכים מזויפים על שם ולנטינה לזרבנה טובארצ'י — יוונית. עם זהות חדשה זו נעה בשטח הכבוש, מצאה מחסה אצל משפחות שונות, ולבסוף גורשה לגרמניה כעובדת כפייה. מפעל לבנים, מחנה עונשין, עבודה מעלות השחר עד חשכה — מכות, השפלה, תשישות. ובכל זאת, בין כל אותם זוועות נמצאו גרמנים בודדים שנהגו בעובדות בצניעות. לאחר השחרור חזרה לברית המועצות ופנתה לאוקראינה.",
+"c8-q":"\"כשאני שומע את עדות אקטרינה לבובנה על סבלה בגרמניה, מה שמדהים אותי אינן זוועות הכפייה הפשיסטית — אלא האנשים הטובים.\" — ל. יארוצקי",
+"c9-t":"ט. ויקטור בבוכנוואלד",
+"c9-b":"ויקטור לבוביץ' חזן היה בן 19 בסתיו 1941, כשאמו ושני אחיו הקטנים נרצחו. הוא נלחם ליד לנינגרד. ב-1942 נפל בשבי פצוע ומחוסר הכרה. עבר דרך אושוויץ (שלושה חודשים), ואז בוכנוואלד — קומנדו שטיינברוך (מחצבה): שבעים איש, גרניט, קרונות. ביום החמישי קרס מתשישות. שבוי קטן עם משולש אדום העביר לו פתק — הפניה לחדר החולים. זה היה הקומוניסט הגרמני היינריך זיידרלנד, שהכניס את ויקטור למחתרת. בערבים הסתובב ויקטור בין הצריפים, רקם קשרים. ב-1944 התגלה מלשין — המחתרת גזרה עליו מוות. ויקטור זומן ל\"חלון השלישי\" — פירושו: מוות. אך זיידרלנד הספיק: עכשיו ויקטור הוא ויקטור איבנוביץ' מרקולוב. הועבר למפעל קטרים. הצטרף לקבוצת חבלה שהשמידה ציוד. ב-11 באפריל 1945, בשעה 15:15, החל המרד. לפי מספר מקורות, גדוד גוש 25 בפיקוד ו.ל. חזן פרץ את מגדלי השמירה. בשעה 16:00 נשבר ההתנגדות. עשרים אלף אסירים קמו.",
+"c9-q":"\"כל הכבוד, חבר חזן. עמדת בניסיון בכבוד. צעיר!\" — חוקר הביטחון הסטליניסטי, לאחר שבעה ימי חקירה בחשד לריגול לטובת ארה\"ב",
+"c10-t":"י. אחרי המלחמה",
+"c10-b":"לאחר השחרור חזר ויקטור לברית המועצות ונעצר מיד על ידי אנשי הביטחון הסטליניסטיים בסטאלינו (דונייצק) בחשד לריגול. שבעה ימי חקירה — ושוחרר. קטיה, שחזרה מגרמניה, הגיעה לוורחני אדז'אכי — ושם מצאה את איזיה חי. הרגע מתועד בפשטות: הנער הגביה עיניים מהחצר ורץ פנימה: \"ויטיה, קטיה שלנו חיה!\". איזיה (לימים איליה) עבר לטביליסי. חלה קשות בלוקמיה והיגר לישראל לטיפול. ויקטור לבוביץ' חזן עבד עד סוף חייו באזובסטל כעובד כבשן. נפטר ב-1987 בגיל 65. שלושה שמות שלא ניצלו — מירה, בוריה ויאן — נזכרים.",
+"tree-title":"משפחת חזן",
+members:[
+  {name:"ויקטור לבוביץ' חזן",role:"הבן הבכור (19 ב-1941). נלחם ליד לנינגרד; ניצול בוכנוואלד; הנהיג את מרד 1945. נפטר 1987, בגיל 65.",status:"survived",icon:"👨"},
+  {name:"קטיה (אקטרינה לבובנה)",role:"הבת, 16 ב-1941. ברחה מהאסם; שרדה עבודת כפייה בגרמניה; חזרה אחרי המלחמה.",status:"survived",icon:"👩"},
+  {name:"איזיה (איליה לבוביץ')",role:"הבן, 12 ב-1941. ראה את רצח אביו; העיד במשפט. עבר לטביליסי; היגר לישראל.",status:"survived",icon:"👦"},
+  {name:"לב איסאקוביץ' חזן",role:"האב, 48. פרץ את דלת האסם והוביל ~300 לבריחה. נורה למוות על ידי השוטר יאבה בסאמויילובקה.",status:"perished",icon:"👴"},
+  {name:"מירה איונובנה",role:"האם, 41. הועלתה על משאית עם הילדים הקטנים. נרצחה באגרובזה, 19 באוקטובר 1941.",status:"perished",icon:"👵"},
+  {name:"בוריה (בוריס)",role:"הבן, 9 שנים. נרצח באגרובזה, 19 באוקטובר 1941.",status:"perished",icon:"🕯️"},
+  {name:"יאן",role:"הבן, 3 שנים. נרצח באגרובזה, 19 באוקטובר 1941.",status:"perished",icon:"🕯️"}
+],
+survived:"✅ שרד/ה",perished:"🕯️ נספה/נספתה"
+}
 };
-
-function setLang(l, btn) {
-  localStorage.setItem('hlang', l);
-  document.documentElement.lang = l;
-  document.documentElement.dir = l === 'he' ? 'rtl' : 'ltr';
-  document.querySelectorAll('.lang-btns button').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  else document.getElementById('btn-' + l).classList.add('active');
-  const d = T[l];
+function setLang(l,btn){
+  localStorage.setItem('hlang',l);
+  document.documentElement.lang=l;
+  document.documentElement.dir=l==='he'?'rtl':'ltr';
+  document.querySelectorAll('.lang-btns button').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  else document.getElementById('btn-'+l).classList.add('active');
+  const d=T[l];
   ['nav-home','nav-title','nav-book','aside-chapters',
-   's1','s2','s3','s4','s5','s6','s7','s8','s9','s10',
+   's1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11',
    'hero-title','hero-sub',
-   'c1-title','c1-body','c2-title','c2-body',
-   'c3-title','c3-body','c3-quote',
-   'c4-title','c4-body','c4-quote',
-   'c5-title','c5-body','c5-quote',
-   'c6-title','c6-body',
-   'c7-title','c7-body','c7-quote',
-   'c8-title','c8-body',
-   'c9-title','c9-body','c9-quote',
-   'tree-title'
-  ].forEach(id => {
-    const el = document.getElementById(id);
-    if (el && d[id] !== undefined) el.innerHTML = d[id];
-  });
-  const grid = document.getElementById('members-grid');
-  grid.innerHTML = d.members.map(m =>
-    `<div class="member ${m.status}">
-      <div class="icon">${m.icon}</div>
-      <div class="name">${m.name}</div>
-      <div style="font-size:.78rem;color:#8a7a6a;margin-bottom:4px">${m.role}</div>
-      <div class="status">${m.status === 'survived' ? d.survived : d.perished}</div>
-    </div>`
+   'c1-t','c1-b','c2-t','c2-b','c3-t','c3-b','c3-q',
+   'c4-t','c4-b','c5-t','c5-b','c5-q','c6-t','c6-b','c6-q',
+   'c7-t','c7-b','c8-t','c8-b','c8-q','c9-t','c9-b','c9-q',
+   'c10-t','c10-b','tree-title'
+  ].forEach(id=>{const el=document.getElementById(id);if(el&&d[id]!==undefined)el.innerHTML=d[id];});
+  document.getElementById('members-grid').innerHTML=d.members.map(m=>
+    `<div class="member ${m.status}"><div class="icon">${m.icon}</div><div class="name">${m.name}</div><div style="font-size:.78rem;color:#8a7a6a;margin-bottom:4px">${m.role}</div><div class="status">${m.status==='survived'?d.survived:d.perished}</div></div>`
   ).join('');
 }
-
-// Sidebar active highlight on scroll
-const sections = ['intro','family','oct17','oct19','march','agrobaza','katya','escape','flight','tree'];
-const links = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'];
-window.addEventListener('scroll', () => {
-  let cur = 0;
-  sections.forEach((id, i) => {
-    const el = document.getElementById(id);
-    if (el && window.scrollY + 80 >= el.offsetTop) cur = i;
-  });
-  links.forEach((id, i) => {
-    const el = document.getElementById(id);
-    if (el) el.classList.toggle('active', i === cur);
-  });
+const secs=['intro','family','assembly','march','agrobaza','escape','lev','katya','viktor','after','tree'];
+const lnks=['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11'];
+window.addEventListener('scroll',()=>{
+  let cur=0;
+  secs.forEach((id,i)=>{const el=document.getElementById(id);if(el&&window.scrollY+80>=el.offsetTop)cur=i;});
+  lnks.forEach((id,i)=>{const el=document.getElementById(id);if(el)el.classList.toggle('active',i===cur);});
 });
-
-const saved = localStorage.getItem('hlang') || 'en';
-setLang(saved);
+setLang(localStorage.getItem('hlang')||'en');
 </script>
 </body>
 </html>
