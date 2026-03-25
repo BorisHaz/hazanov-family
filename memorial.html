@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hazanov Family Memorial</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0f0f1a;color:#e8e0d0;font-family:'Georgia',serif;min-height:100vh}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,15,26,0.97);border-bottom:1px solid #c9a84c33;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px}
+  .nav-left a,.nav-right a{color:#c9a84c;text-decoration:none;font-size:.85rem;letter-spacing:.08em}
+  .nav-left a:hover,.nav-right a:hover{color:#f0d080}
+  .nav-title{color:#e8e0d0;font-size:1rem;letter-spacing:.12em;text-transform:uppercase}
+  .lang-btns{display:flex;gap:6px}
+  .lang-btns button{background:none;border:1px solid #c9a84c55;color:#c9a84c;padding:3px 10px;border-radius:3px;cursor:pointer;font-size:.8rem;transition:.2s}
+  .lang-btns button.active,.lang-btns button:hover{background:#c9a84c22;border-color:#c9a84c}
+  .layout{display:flex;padding-top:56px;min-height:100vh}
+  aside{width:220px;position:fixed;top:56px;bottom:0;left:0;overflow-y:auto;background:#0a0a15;border-right:1px solid #c9a84c22;padding:20px 0}
+  aside a{display:block;padding:9px 20px;color:#a09080;text-decoration:none;font-size:.82rem;border-left:2px solid transparent;transition:.2s}
+  aside a:hover,aside a.active{color:#c9a84c;border-left-color:#c9a84c;background:#c9a84c0a}
+  aside .aside-head{padding:8px 20px 12px;font-size:.7rem;letter-spacing:.15em;color:#5a4a3a;text-transform:uppercase}
+  main{margin-left:220px;padding:48px 60px;max-width:860px}
+  .hero{text-align:center;padding:40px 0 60px;border-bottom:1px solid #c9a84c33;margin-bottom:48px}
+  .hero .flame{font-size:2.5rem;animation:flicker 2.5s infinite alternate}
+  @keyframes flicker{0%{opacity:.8;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}100%{opacity:.85;transform:scale(.97)}}
+  .hero h1{font-size:2.2rem;color:#c9a84c;letter-spacing:.06em;margin:16px 0 10px}
+  .hero .subtitle{color:#8a7a6a;font-size:1rem;font-style:italic}
+  .chapter{margin-bottom:56px;scroll-margin-top:80px}
+  .chapter h2{color:#c9a84c;font-size:1.35rem;letter-spacing:.06em;border-bottom:1px solid #c9a84c33;padding-bottom:10px;margin-bottom:20px}
+  .chapter p{line-height:1.85;color:#d0c8b8;margin-bottom:16px;font-size:.97rem}
+  .chapter blockquote{border-left:3px solid #c9a84c55;padding:12px 20px;margin:20px 0;background:#c9a84c08;color:#b0a890;font-style:italic}
+  .family-tree{margin-top:64px;padding-top:40px;border-top:1px solid #c9a84c33}
+  .family-tree h2{color:#c9a84c;font-size:1.35rem;text-align:center;margin-bottom:32px;letter-spacing:.08em}
+  .members{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+  .member{background:#16162a;border:1px solid #c9a84c22;border-radius:6px;padding:18px;text-align:center;transition:.2s}
+  .member:hover{border-color:#c9a84c55;background:#1a1a30}
+  .member .icon{font-size:1.8rem;margin-bottom:8px}
+  .member .name{color:#e8e0d0;font-size:.95rem;margin-bottom:4px}
+  .member .status{font-size:.8rem}
+  .member.survived .status{color:#7ab87a}
+  .member.perished .status{color:#c97070}
+  .divider{text-align:center;color:#5a4a3a;margin:40px 0;font-size:.9rem;letter-spacing:.1em}
+  [dir=rtl] aside a{border-left:none;border-right:2px solid transparent}
+  [dir=rtl] aside a:hover,[dir=rtl] aside a.active{border-right-color:#c9a84c}
+  [dir=rtl] main{margin-left:0;margin-right:220px}
+  [dir=rtl] .chapter blockquote{border-left:none;border-right:3px solid #c9a84c55}
+  @media(max-width:700px){aside{display:none}.layout{display:block}main{margin:0;padding:72px 20px 40px}[dir=rtl] main{margin:0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left"><a href="index.html" id="nav-home">← Home</a></div>
+  <div class="nav-title" id="nav-title">MEMORIAL</div>
+  <div style="display:flex;align-items:center;gap:16px">
+    <div class="lang-btns">
+      <button onclick="setLang('en',this)" id="btn-en" class="active">EN</button>
+      <button onclick="setLang('ru',this)" id="btn-ru">РУ</button>
+      <button onclick="setLang('he',this)" id="btn-he">עב</button>
+    </div>
+    <div class="nav-right"><a href="book.html" id="nav-book">Children's Book →</a></div>
+  </div>
+</nav>
+
+<div class="layout">
+<aside id="sidebar">
+  <div class="aside-head" id="aside-chapters">Chapters</div>
+  <a href="#intro" id="s1">I. Introduction</a>
+  <a href="#family" id="s2">II. The Family</a>
+  <a href="#oct17" id="s3">III. October 17</a>
+  <a href="#oct19" id="s4">IV. October 19</a>
+  <a href="#march" id="s5">V. The March</a>
+  <a href="#agrobaza" id="s6">VI. At Agrobaza</a>
+  <a href="#katya" id="s7">VII. Katya's Account</a>
+  <a href="#escape" id="s8">VIII. The Escape</a>
+  <a href="#flight" id="s9">IX. Flight &amp; Remembrance</a>
+  <a href="#tree" id="s10">✦ Family Tree</a>
+</aside>
+
+<main>
+<div class="hero">
+  <div class="flame">🕯️</div>
+  <h1 id="hero-title">Hazanov Family Memorial</h1>
+  <p class="subtitle" id="hero-sub">Mariupol, Ukraine — October 1941</p>
+</div>
+
+<div class="chapter" id="intro">
+  <h2 id="c1-title">I. Introduction</h2>
+  <p id="c1-body"></p>
+</div>
+<div class="chapter" id="family">
+  <h2 id="c2-title">II. The Family</h2>
+  <p id="c2-body"></p>
+</div>
+<div class="chapter" id="oct17">
+  <h2 id="c3-title">III. October 17, 1941</h2>
+  <p id="c3-body"></p>
+  <blockquote id="c3-quote"></blockquote>
+</div>
+<div class="chapter" id="oct19">
+  <h2 id="c4-title">IV. October 19, 1941</h2>
+  <p id="c4-body"></p>
+  <blockquote id="c4-quote"></blockquote>
+</div>
+<div class="chapter" id="march">
+  <h2 id="c5-title">V. The March</h2>
+  <p id="c5-body"></p>
+  <blockquote id="c5-quote"></blockquote>
+</div>
+<div class="chapter" id="agrobaza">
+  <h2 id="c6-title">VI. At Agrobaza</h2>
+  <p id="c6-body"></p>
+</div>
+<div class="chapter" id="katya">
+  <h2 id="c7-title">VII. Katya's Account</h2>
+  <p id="c7-body"></p>
+  <blockquote id="c7-quote"></blockquote>
+</div>
+<div class="chapter" id="escape">
+  <h2 id="c8-title">VIII. The Escape</h2>
+  <p id="c8-body"></p>
+</div>
+<div class="chapter" id="flight">
+  <h2 id="c9-title">IX. Flight &amp; Remembrance</h2>
+  <p id="c9-body"></p>
+  <blockquote id="c9-quote"></blockquote>
+</div>
+
+<div class="divider">✦ ✦ ✦</div>
+
+<div class="family-tree" id="tree">
+  <h2 id="tree-title">Family Tree</h2>
+  <div class="members" id="members-grid"></div>
+</div>
+</main>
+</div>
+
+<script>
+const T = {
+  en: {
+    "nav-home":"← Home","nav-title":"MEMORIAL","nav-book":"Children's Book →",
+    "aside-chapters":"Chapters",
+    "s1":"I. Introduction","s2":"II. The Family","s3":"III. October 17",
+    "s4":"IV. October 19","s5":"V. The March","s6":"VI. At Agrobaza",
+    "s7":"VII. Katya's Account","s8":"VIII. The Escape","s9":"IX. Flight & Remembrance","s10":"✦ Family Tree",
+    "hero-title":"Hazanov Family Memorial",
+    "hero-sub":"Mariupol, Ukraine — October 1941",
+    "c1-title":"I. Introduction",
+    "c1-body":"This testimony was recorded to preserve the memory of the Hazanov family of Mariupol and the events of October 1941, when German forces systematically murdered the Jewish population of the city. What follows is the account of Viktor Hazanov and his wife Katya — survivors who carried these memories for the rest of their lives. It is told so that those who came after them will never forget.",
+    "c2-title":"II. The Family",
+    "c2-body":"The Hazanov family lived in Mariupol, a port city on the Sea of Azov in eastern Ukraine. Viktor and Katya had built a life there with their son Izya. Viktor's parents — Lev and Mira — also lived in the city, as did his brothers Boris and Yan. The family was close-knit, rooted in the community, and had known Mariupol as home for generations.",
+    "c3-title":"III. October 17, 1941",
+    "c3-body":"On October 17, 1941, German occupying authorities issued an order requiring all Jewish residents of Mariupol to report to a designated assembly point. The announcement was made with assurances of relocation to a work settlement. Families packed what they could carry. Viktor, Katya, and Izya gathered with Viktor's parents Lev and Mira, and his brothers Boris and Yan. They did not know it would be the last time the full family would stand together.",
+    "c3-quote":"\"We were told to bring food for three days and warm clothing. People believed it. They had to believe something.\"",
+    "c4-title":"IV. October 19, 1941",
+    "c4-body":"Two days later, on October 19, the assembled Jews were marched out of the city under armed guard. The column stretched for blocks — thousands of men, women, children, and the elderly. German soldiers and local collaborators lined the route. Those who fell behind were beaten. The direction of the march became clear only as they reached the outskirts: they were being taken toward the ravines at Agrobaza, several kilometers from the city center.",
+    "c4-quote":"\"There were so many of us. I held Izya's hand the entire way. I did not let go.\" — Katya",
+    "c5-title":"V. The March",
+    "c5-body":"The march lasted several hours. People carried bundles, children, elderly parents. The October air was cold. Guards shouted at anyone who slowed. At the edges of the column, some people attempted to break away and were shot. The sound of shooting was constant. Viktor held close to his parents, trying to shield them. Katya kept Izya pressed against her. Boris and Yan walked just ahead.",
+    "c5-quote":"\"My father Lev kept saying: it will be all right. Even then. He kept saying it.\" — Viktor",
+    "c6-title":"VI. At Agrobaza",
+    "c6-body":"At Agrobaza, the column was herded into a fenced area beside large anti-tank ditches that had been dug earlier. People were stripped of valuables and documents. The shootings began. German Einsatzgruppen and their auxiliaries worked methodically. The screaming, then silence — then screaming again as the next group was brought forward. Boris and Yan were taken. Lev and Mira were taken. Viktor and Katya, separated in the chaos, each witnessed the murders of people around them. How they survived the initial selection was a matter of chance, confusion, and moments that neither could fully explain in words.",
+    "c7-title":"VII. Katya's Account",
+    "c7-body":"Katya was pushed to the edge of the ditch with a group of women. She fell — or was pushed — and lay beneath bodies, Izya pressed beneath her. She lay still. She could not move. The shooting above her continued. She heard voices in German. Then silence. Then a long darkness. When she finally moved, it was night. She pulled Izya up. He was alive. She climbed out of the ditch and ran.",
+    "c7-quote":"\"I cannot explain it. I only know Izya was alive and I ran toward the field.\" — Katya",
+    "c8-title":"VIII. The Escape",
+    "c8-body":"Viktor had broken away from the column in the chaos at Agrobaza, crawling through a gap in the perimeter fence. He hid in the fields overnight, not knowing if Katya and Izya had survived. By morning he moved toward the outskirts of the city. He found shelter with a non-Jewish neighbor who hid him at great personal risk for several days. Katya and Izya, moving at night across fields, found their way to a village outside the city. A Ukrainian family took them in. The two groups — Viktor, and Katya with Izya — did not find each other for several weeks.",
+    "c9-title":"IX. Flight &amp; Remembrance",
+    "c9-body":"The family eventually reunited and fled east, away from occupied territory. Lev Hazanov, who had survived the ditch alongside Viktor, escaped with him but died months later from illness and the physical toll of that day. Mira, Boris, and Yan did not survive. Of the extended family gathered on October 17, only Viktor, Katya, Izya, and Lev — for a short time — made it out. Viktor and Katya carried this testimony as a duty: to speak for those who could not. The 33,771 Jews of Mariupol were murdered in the ravines of Agrobaza on October 19 and 20, 1941.",
+    "c9-quote":"\"We survived. That is not a comfort — it is a responsibility. To remember them by name.\" — Viktor Hazanov",
+    "tree-title":"The Hazanov Family",
+    members: [
+      {name:"Viktor Hazanov",role:"Son, Survivor",status:"survived",icon:"👨"},
+      {name:"Katya Hazanov",role:"Viktor's wife, Survivor",status:"survived",icon:"👩"},
+      {name:"Izya Hazanov",role:"Their son, Survivor",status:"survived",icon:"👦"},
+      {name:"Lev Hazanov",role:"Viktor's father — survived the ditch, died months later",status:"perished",icon:"👴"},
+      {name:"Mira Hazanov",role:"Viktor's mother",status:"perished",icon:"👵"},
+      {name:"Boris Hazanov",role:"Viktor's brother",status:"perished",icon:"🕯️"},
+      {name:"Yan Hazanov",role:"Viktor's brother",status:"perished",icon:"🕯️"}
+    ],
+    survived:"✅ Survived",perished:"🕯️ Perished"
+  },
+  ru: {
+    "nav-home":"← Главная","nav-title":"МЕМОРИАЛ","nav-book":"Детская книга →",
+    "aside-chapters":"Главы",
+    "s1":"I. Вступление","s2":"II. Семья","s3":"III. 17 октября",
+    "s4":"IV. 19 октября","s5":"V. Марш","s6":"VI. На Агробазе",
+    "s7":"VII. Рассказ Кати","s8":"VIII. Побег","s9":"IX. Бегство и память","s10":"✦ Семейное дерево",
+    "hero-title":"Мемориал семьи Хазановых",
+    "hero-sub":"Мариуполь, Украина — Октябрь 1941",
+    "c1-title":"I. Вступление",
+    "c1-body":"Это свидетельство было записано, чтобы сохранить память о семье Хазановых из Мариуполя и событиях октября 1941 года, когда немецкие войска систематически уничтожали еврейское население города. Это рассказ Виктора Хазанова и его жены Кати — выживших, которые несли эту память всю оставшуюся жизнь. Оно записано, чтобы те, кто пришёл после них, никогда не забыли.",
+    "c2-title":"II. Семья",
+    "c2-body":"Семья Хазановых жила в Мариуполе — портовом городе на берегу Азовского моря на востоке Украины. Виктор и Катя обустроили здесь жизнь вместе с сыном Изей. Родители Виктора — Лев и Мира — тоже жили в городе, как и его братья Борис и Ян. Семья была дружной, укоренившейся в городской жизни и считала Мариуполь своим домом на протяжении поколений.",
+    "c3-title":"III. 17 октября 1941 года",
+    "c3-body":"17 октября 1941 года немецкие оккупационные власти издали приказ, обязывающий всё еврейское население Мариуполя явиться в назначенное место сбора. Объявление сопровождалось обещаниями переселения в трудовое поселение. Семьи собирали то, что могли унести. Виктор, Катя и Изя встретились с родителями Виктора — Львом и Мирой — и его братьями Борисом и Яном. Они не знали, что это последний раз, когда вся семья стоит вместе.",
+    "c3-quote":"«Нам сказали взять еду на три дня и тёплую одежду. Люди верили. Им нужно было во что-то верить.»",
+    "c4-title":"IV. 19 октября 1941 года",
+    "c4-body":"Двое суток спустя, 19 октября, собранных евреев под вооружённым конвоем вывели за пределы города. Колонна растянулась на несколько кварталов — тысячи мужчин, женщин, детей и стариков. По обеим сторонам стояли немецкие солдаты и местные коллаборационисты. Тех, кто отставал, избивали. Куда ведут, стало ясно лишь на окраине: людей гнали к оврагам Агробазы, в нескольких километрах от центра.",
+    "c4-quote":"«Нас было так много. Я всю дорогу держала Изю за руку. Не отпускала.» — Катя",
+    "c5-title":"V. Марш",
+    "c5-body":"Марш длился несколько часов. Люди несли узлы, детей, пожилых родителей. В октябрьском воздухе было холодно. Конвоиры кричали на каждого, кто замедлял шаг. На краях колонны некоторые пытались вырваться — их расстреливали. Выстрелы не умолкали. Виктор держался рядом с родителями, стараясь защитить их. Катя прижимала к себе Изю. Борис и Ян шли чуть впереди.",
+    "c5-quote":"«Папа всё время говорил: всё будет хорошо. Даже тогда. Всё время говорил.» — Виктор",
+    "c6-title":"VI. На Агробазе",
+    "c6-body":"На Агробазе колонну загнали в огороженный участок у больших противотанковых рвов, вырытых заранее. Людей лишали ценностей и документов. Начались расстрелы. Немецкие айнзацгруппы и их пособники работали методично. Крики, затем тишина — затем снова крики, когда подводили следующую группу. Бориса и Яна увели. Льва и Миру увели. Виктора и Катю разлучила суматоха, и каждый из них стал свидетелем убийств вокруг. Как они уцелели в первоначальном отборе — случай, неразбериха и мгновения, которые ни один из них не мог объяснить словами.",
+    "c7-title":"VII. Рассказ Кати",
+    "c7-body":"Катю оттеснили к краю рва вместе с группой женщин. Она упала — или её толкнули — и лежала под телами, прижав Изю к себе. Она лежала не двигаясь. Она не могла пошевелиться. Стрельба над ней не прекращалась. Слышались голоса на немецком. Потом тишина. Потом долгая темнота. Когда она наконец пошевелилась, была ночь. Она подняла Изю. Он был жив. Она вылезла из рва и побежала.",
+    "c7-quote":"«Я не могу это объяснить. Я знаю только, что Изя был жив, и я побежала в поле.» — Катя",
+    "c8-title":"VIII. Побег",
+    "c8-body":"Виктор вырвался из колонны в хаосе на Агробазе, проползя через щель в ограждении. Он провёл ночь в полях, не зная, выжили ли Катя и Изя. К утру он направился к окраинам города. Убежище ему дала нееврейская соседка, рискуя собственной жизнью, — несколько дней она его скрывала. Катя с Изей передвигались ночами через поля и добрались до деревни за городом. Украинская семья их приютила. Виктор и Катя с Изей нашли друг друга лишь спустя несколько недель.",
+    "c9-title":"IX. Бегство и память",
+    "c9-body":"Семья воссоединилась и бежала на восток, подальше от оккупированных территорий. Лев Хазанов, выживший в овраге вместе с Виктором, спасся, но скончался через несколько месяцев от болезни и последствий того дня. Мира, Борис и Ян не выжили. Из всей семьи, собравшейся 17 октября, уцелели лишь Виктор, Катя, Изя и Лев — ненадолго. Виктор и Катя считали передачу этого свидетельства своим долгом: говорить за тех, кто не мог. 33 771 еврей Мариуполя был убит в оврагах Агробазы 19–20 октября 1941 года.",
+    "c9-quote":"«Мы выжили. Это не утешение — это ответственность. Помнить их по именам.» — Виктор Хазанов",
+    "tree-title":"Семья Хазановых",
+    members: [
+      {name:"Виктор Хазанов",role:"Сын, выживший",status:"survived",icon:"👨"},
+      {name:"Катя Хазанова",role:"Жена Виктора, выжившая",status:"survived",icon:"👩"},
+      {name:"Изя Хазанов",role:"Их сын, выживший",status:"survived",icon:"👦"},
+      {name:"Лев Хазанов",role:"Отец Виктора — выжил в овраге, умер спустя месяцы",status:"perished",icon:"👴"},
+      {name:"Мира Хазанова",role:"Мать Виктора",status:"perished",icon:"👵"},
+      {name:"Борис Хазанов",role:"Брат Виктора",status:"perished",icon:"🕯️"},
+      {name:"Ян Хазанов",role:"Брат Виктора",status:"perished",icon:"🕯️"}
+    ],
+    survived:"✅ Выжил(а)",perished:"🕯️ Погиб(ла)"
+  },
+  he: {
+    "nav-home":"→ דף הבית","nav-title":"אַזְכָּרָה","nav-book":"← ספר הילדים",
+    "aside-chapters":"פרקים",
+    "s1":"א. מבוא","s2":"ב. המשפחה","s3":"ג. 17 באוקטובר",
+    "s4":"ד. 19 באוקטובר","s5":"ה. המצעד","s6":"ו. באגרובזה",
+    "s7":"ז. עדות קטיה","s8":"ח. הבריחה","s9":"ט. הפרידה והזיכרון","s10":"✦ עץ המשפחה",
+    "hero-title":"אַזְכָּרַת מִשְׁפַּחַת חַזָּנוֹב",
+    "hero-sub":"מריופול, אוקראינה — אוקטובר 1941",
+    "c1-title":"א. מבוא",
+    "c1-body":"עדות זו נרשמה כדי לשמר את זכרה של משפחת חזנוב ממריופול ואת אירועי אוקטובר 1941, עת חיסלו הכוחות הגרמניים בשיטתיות את האוכלוסייה היהודית של העיר. לפניכם עדותם של ויקטור חזנוב ואשתו קטיה — ניצולים שנשאו זיכרונות אלה כל ימי חייהם. היא נרשמה כדי שהדורות הבאים לא ישכחו לעולם.",
+    "c2-title":"ב. המשפחה",
+    "c2-body":"משפחת חזנוב חיה במריופול, עיר נמל על חוף ים אזוב במזרח אוקראינה. ויקטור וקטיה בנו שם חיים יחד עם בנם איזיה. הוריו של ויקטור — לב ומירה — גם הם גרו בעיר, וכן אחיו בוריס ויאן. המשפחה הייתה קרובה ומושרשת בקהילה, ורואה במריופול את ביתה מדורות.",
+    "c3-title":"ג. 17 באוקטובר 1941",
+    "c3-body":"ב-17 באוקטובר 1941 הוציאו הרשויות הגרמניות הכובשות צו המחייב את כל התושבים היהודים במריופול להתייצב בנקודת איסוף מוגדרת. ההכרזה נעשתה בהבטחה לעתק להתנחלות עבודה. משפחות ארזו מה שיכלו לשאת. ויקטור, קטיה ואיזיה נפגשו עם הוריו של ויקטור — לב ומירה — ועם אחיו בוריס ויאן. הם לא ידעו שזו הפעם האחרונה שכל המשפחה עומדת יחד.",
+    "c3-quote":"\"אמרו לנו להביא אוכל לשלושה ימים ובגדים חמים. אנשים האמינו. הם היו חייבים להאמין במשהו.\"",
+    "c4-title":"ד. 19 באוקטובר 1941",
+    "c4-body":"יומיים לאחר מכן, ב-19 באוקטובר, צעדו היהודים שנאספו מחוץ לעיר תחת שמירה חמושה. הטור התפרש על פני רחובות שלמים — אלפי גברים, נשים, ילדים וקשישים. חיילים גרמניים ומשתפי פעולה מקומיים הסתדרו לאורך המסלול. מי שפיגר לקה מכות. כיוון המצעד התברר רק בפאתי העיר: הם הובלו לעבר התעלות ב-אגרובזה, כמה קילומטרים ממרכז העיר.",
+    "c4-quote":"\"היינו כה רבים. החזקתי את ידו של איזיה כל הדרך. לא שיחררתי.\" — קטיה",
+    "c5-title":"ה. המצעד",
+    "c5-body":"המצעד נמשך שעות אחדות. אנשים נשאו חבילות, ילדים, הורים קשישים. אוויר אוקטובר היה קר. השומרים צעקו על כל מי שהאט. בשולי הטור ניסו חלק לברוח ונורו. קול היריות לא פסק. ויקטור נצמד להוריו, מנסה להגן עליהם. קטיה לחצה את איזיה אליה. בוריס ויאן הלכו ממש לפניהם.",
+    "c5-quote":"\"אבא לב המשיך לומר: יהיה בסדר. אפילו אז. המשיך לומר זאת.\" — ויקטור",
+    "c6-title":"ו. באגרובזה",
+    "c6-body":"באגרובזה גורש הטור לשטח מגודר ליד תעלות נגד-טנקים גדולות שנחפרו מראש. אנשים נשדדו מחפציהם ומתעודותיהם. הירי החל. יחידות האיינזצגרופן הגרמניות וסייענוהן פעלו בשיטתיות. צרחות, לאחריהן דממה — ואז שוב צרחות כשהובאה הקבוצה הבאה. בוריס ויאן נלקחו. לב ומירה נלקחו. ויקטור וקטיה נפרדו בתוהו ובוהו, כל אחד עד לרצח האנשים סביבו. כיצד שרדו את הסלקציה הראשונית — עניין של מקרה, בלבול ורגעים שאף אחד מהם לא יכול היה להסביר במילים.",
+    "c7-title":"ז. עדות קטיה",
+    "c7-body":"קטיה נדחפה לשפת התעלה עם קבוצת נשים. היא נפלה — או נדחפה — ושכבה מתחת לגופות, כשאיזיה לחוץ מתחתיה. היא שכבה ללא תנועה. היא לא יכלה להזיז אבר. הירי מעליה נמשך. שמעה קולות בגרמנית. לאחר מכן שקט. ואז חשכה ממושכת. כשסוף-סוף זזה, היה לילה. היא הרימה את איזיה. הוא היה בחיים. היא טיפסה מהתעלה וברחה.",
+    "c7-quote":"\"אני לא יכולה להסביר זאת. אני רק יודעת שאיזיה היה חי ורצתי לשדה.\" — קטיה",
+    "c8-title":"ח. הבריחה",
+    "c8-body":"ויקטור נמלט מהטור בתוהו ובוהו באגרובזה, כשהוא זוחל דרך פרצה בגדר ההיקפית. הוא התחבא בשדות לאורך הלילה, מבלי לדעת אם קטיה ואיזיה שרדו. עם בוקר נע לעבר פאתי העיר. מצא מחסה אצל שכנה לא-יהודייה שהחביאה אותו בסיכון אישי גדול למשך מספר ימים. קטיה ואיזיה, שזזו בלילות דרך שדות, הגיעו לכפר מחוץ לעיר. משפחה אוקראינית קיבלה אותם. שתי הקבוצות — ויקטור, וקטיה עם איזיה — לא מצאו זה את זה במשך כמה שבועות.",
+    "c9-title":"ט. הפרידה והזיכרון",
+    "c9-body":"המשפחה התאחדה לבסוף וברחה מזרחה, הרחק מהשטחים הכבושים. לב חזנוב, ששרד את התעלה לצד ויקטור, נמלט אך נפטר חודשים לאחר מכן ממחלה ומהתשלום הגופני של אותו היום. מירה, בוריס ויאן לא שרדו. מכל המשפחה המורחבת שהתאספה ב-17 באוקטובר, שרדו רק ויקטור, קטיה, איזיה ולב — לזמן קצר. ויקטור וקטיה נשאו עדות זו כחובה: לדבר עבור אלה שלא יכלו. 33,771 יהודי מריופול נרצחו בתעלות אגרובזה ב-19–20 באוקטובר 1941.",
+    "c9-quote":"\"שרדנו. זה אינו נחמה — זוהי אחריות. לזכור אותם בשמותיהם.\" — ויקטור חזנוב",
+    "tree-title":"משפחת חזנוב",
+    members: [
+      {name:"ויקטור חזנוב",role:"הבן, ניצול",status:"survived",icon:"👨"},
+      {name:"קטיה חזנוב",role:"אשת ויקטור, ניצולה",status:"survived",icon:"👩"},
+      {name:"איזיה חזנוב",role:"בנם, ניצול",status:"survived",icon:"👦"},
+      {name:"לב חזנוב",role:"אביו של ויקטור — שרד את התעלה, נפטר חודשים לאחר מכן",status:"perished",icon:"👴"},
+      {name:"מירה חזנוב",role:"אמו של ויקטור",status:"perished",icon:"👵"},
+      {name:"בוריס חזנוב",role:"אחיו של ויקטור",status:"perished",icon:"🕯️"},
+      {name:"יאן חזנוב",role:"אחיו של ויקטור",status:"perished",icon:"🕯️"}
+    ],
+    survived:"✅ שרד/ה",perished:"🕯️ נספה/נספתה"
+  }
+};
+
+function setLang(l, btn) {
+  localStorage.setItem('hlang', l);
+  document.documentElement.lang = l;
+  document.documentElement.dir = l === 'he' ? 'rtl' : 'ltr';
+  document.querySelectorAll('.lang-btns button').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  else document.getElementById('btn-' + l).classList.add('active');
+  const d = T[l];
+  ['nav-home','nav-title','nav-book','aside-chapters',
+   's1','s2','s3','s4','s5','s6','s7','s8','s9','s10',
+   'hero-title','hero-sub',
+   'c1-title','c1-body','c2-title','c2-body',
+   'c3-title','c3-body','c3-quote',
+   'c4-title','c4-body','c4-quote',
+   'c5-title','c5-body','c5-quote',
+   'c6-title','c6-body',
+   'c7-title','c7-body','c7-quote',
+   'c8-title','c8-body',
+   'c9-title','c9-body','c9-quote',
+   'tree-title'
+  ].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && d[id] !== undefined) el.innerHTML = d[id];
+  });
+  const grid = document.getElementById('members-grid');
+  grid.innerHTML = d.members.map(m =>
+    `<div class="member ${m.status}">
+      <div class="icon">${m.icon}</div>
+      <div class="name">${m.name}</div>
+      <div style="font-size:.78rem;color:#8a7a6a;margin-bottom:4px">${m.role}</div>
+      <div class="status">${m.status === 'survived' ? d.survived : d.perished}</div>
+    </div>`
+  ).join('');
+}
+
+// Sidebar active highlight on scroll
+const sections = ['intro','family','oct17','oct19','march','agrobaza','katya','escape','flight','tree'];
+const links = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'];
+window.addEventListener('scroll', () => {
+  let cur = 0;
+  sections.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY + 80 >= el.offsetTop) cur = i;
+  });
+  links.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', i === cur);
+  });
+});
+
+const saved = localStorage.getItem('hlang') || 'en';
+setLang(saved);
+</script>
+</body>
+</html>
