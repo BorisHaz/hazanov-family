@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hazanov Family | Семья Хазановых | משפחת חזנוב</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Crimson Text',Georgia,serif;background:#0f0f1a;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden}
+#sc{position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 50% 50%,#1a1a3a 0%,#0f0f1a 100%)}
+.star{position:absolute;background:white;border-radius:50%;animation:tw var(--d,3s) infinite alternate var(--dl,0s)}
+@keyframes tw{0%{opacity:.1;transform:scale(.8)}100%{opacity:.9;transform:scale(1.2)}}
+nav{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem}
+.nav-logo{color:#c9a84c;font-family:'Playfair Display',serif;font-size:1rem;text-decoration:none}
+.lang-switcher{display:flex;gap:.5rem}
+.lb{background:transparent;border:1px solid #c9a84c80;color:#c9a84c;padding:.3rem .8rem;cursor:pointer;font-size:.85rem;transition:all .3s;border-radius:3px;font-family:inherit}
+.lb:hover,.lb.active{background:#c9a84c;color:#0f0f1a;border-color:#c9a84c}
+header{position:relative;z-index:10;text-align:center;padding:2rem 2rem 1rem}
+.mt{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,4rem);color:#c9a84c;letter-spacing:.02em;margin-bottom:.5rem}
+.sd{font-size:1.1rem;color:#8a7560;letter-spacing:.1em;margin-bottom:.5rem}
+.ml{font-size:1rem;color:#605040;font-style:italic}
+.gl{width:120px;height:1px;background:linear-gradient(to right,transparent,#c9a84c,transparent);margin:1.5rem auto}
+.cards{position:relative;z-index:10;display:flex;gap:2rem;padding:1rem 2rem 3rem;max-width:860px;margin:0 auto;width:100%;flex-wrap:wrap;justify-content:center}
+.card{flex:1;min-width:280px;max-width:380px;border-radius:16px;padding:2.5rem 2rem;text-decoration:none;transition:transform .35s,box-shadow .35s;text-align:center}
+.card:hover{transform:translateY(-10px)}
+.cm{background:linear-gradient(145deg,#1c1c35,#141428);border:1px solid #c9a84c30;box-shadow:0 4px 24px rgba(201,168,76,.08)}
+.cm:hover{box-shadow:0 16px 48px rgba(201,168,76,.22)}
+.cb{background:linear-gradient(145deg,#1e3a1e,#122412);border:1px solid #7cb97830;box-shadow:0 4px 24px rgba(124,185,120,.08)}
+.cb:hover{box-shadow:0 16px 48px rgba(124,185,120,.22)}
+.ci{font-size:3.5rem;display:block;margin-bottom:1.2rem}
+.ct{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:.8rem}
+.cm .ct{color:#c9a84c}
+.cb .ct{color:#7cb978}
+.cd{font-size:1rem;line-height:1.65}
+.cm .cd{color:#9a8870}
+.cb .cd{color:#7aaa78}
+.cc{display:inline-block;margin-top:1.5rem;font-size:1rem;padding:.5rem 1.5rem;border-radius:30px;font-family:inherit;transition:all .3s}
+.cm .cc{border:1px solid #c9a84c;color:#c9a84c}
+.cm:hover .cc{background:#c9a84c;color:#0f0f1a}
+.cb .cc{border:1px solid #7cb978;color:#7cb978}
+.cb:hover .cc{background:#7cb978;color:#0f0f1a}
+footer{position:relative;z-index:10;text-align:center;padding:1.5rem;color:#3a2e22;font-size:.85rem;margin-top:auto}
+@media(max-width:600px){.cards{flex-direction:column;align-items:center}.card{max-width:100%}}
+</style>
+</head>
+<body>
+<div id="sc"></div>
+<nav>
+  <span class="nav-logo">✡</span>
+  <div class="lang-switcher">
+    <button class="lb active" onclick="setLang('en',this)">EN</button>
+    <button class="lb" onclick="setLang('ru',this)">РУ</button>
+    <button class="lb" onclick="setLang('he',this)">עב</button>
+  </div>
+</nav>
+<header>
+  <h1 class="mt" id="mt">Hazanov Family</h1>
+  <p class="sd" id="sd">Mariupol · 1941</p>
+  <p class="ml" id="ml">In memory of those who did not survive</p>
+  <div class="gl"></div>
+</header>
+<section class="cards">
+  <a href="memorial.html" class="card cm">
+    <span class="ci">🕯️</span>
+    <h2 class="ct" id="memt">Family Memorial</h2>
+    <p class="cd" id="memd">The full story of tragedy, courage, and those who helped them survive.</p>
+    <span class="cc" id="memc">Enter →</span>
+  </a>
+  <a href="book.html" class="card cb">
+    <span class="ci">📖</span>
+    <h2 class="ct" id="bookt">Children's Book</h2>
+    <p class="cd" id="bookd">A story for children — about a brave family and the importance of remembering.</p>
+    <span class="cc" id="bookc">Read →</span>
+  </a>
+</section>
+<footer id="foot">Mariupol, Ukraine · 1941 · In memoriam</footer>
+<script>
+const sc=document.getElementById('sc');
+for(let i=0;i<120;i++){const s=document.createElement('div');s.className='star';const sz=(Math.random()*2.5+.4).toFixed(1);s.style.cssText=`width:${sz}px;height:${sz}px;left:${(Math.random()*100).toFixed(1)}%;top:${(Math.random()*100).toFixed(1)}%;--d:${(Math.random()*3+2).toFixed(1)}s;--dl:${(Math.random()*4).toFixed(1)}s`;sc.appendChild(s);}
+const T={
+  en:{mt:'Hazanov Family',sd:'Mariupol · 1941',ml:'In memory of those who did not survive',memt:'Family Memorial',memd:'The full story of tragedy, courage, and those who helped them survive.',memc:'Enter →',bookt:"Children's Book",bookd:'A story for children — about a brave family and the importance of remembering.',bookc:'Read →',foot:'Mariupol, Ukraine · 1941 · In memoriam',dir:'ltr'},
+  ru:{mt:'Семья Хазановых',sd:'Мариуполь · 1941',ml:'В память о тех, кто не выжил',memt:'Семейный мемориал',memd:'Полная история трагедии, мужества и людей, помогших им выжить.',memc:'Войти →',bookt:'Детская книга',bookd:'История для детей — о смелой семье и важности памяти.',bookc:'Читать →',foot:'Мариуполь, Украина · 1941 · В память',dir:'ltr'},
+  he:{mt:'משפחת חזנוב',sd:'מריופול · 1941',ml:'לזכר אלה שלא שרדו',memt:'אנדרטת המשפחה',memd:'הסיפור המלא של הטרגדיה, האומץ, ואנשים שעזרו להם לשרוד.',memc:'← כניסה',bookt:'ספר לילדים',bookd:'סיפור לילדים — על משפחה אמיצה וחשיבות הזיכרון.',bookc:'← קרא',foot:'מריופול, אוקראינה · 1941 · לזכרם',dir:'rtl'}
+};
+function setLang(l,btn){
+  const d=T[l];
+  document.documentElement.dir=d.dir;
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  Object.keys(d).forEach(k=>{if(k==='dir')return;const el=document.getElementById(k);if(el)el.textContent=d[k];});
+  localStorage.setItem('hlang',l);
+}
+const sv=localStorage.getItem('hlang')||'en';
+const bt=document.querySelectorAll('.lb');
+if(sv==='ru')setLang('ru',bt[1]);
+else if(sv==='he')setLang('he',bt[2]);
+else setLang('en',bt[0]);
+</script>
+</body>
+</html>
