@@ -21,7 +21,7 @@ header{position:relative;z-index:10;text-align:center;padding:2rem 2rem 1rem}
 .sd{font-size:1.1rem;color:#8a7560;letter-spacing:.1em;margin-bottom:.5rem}
 .ml{font-size:1rem;color:#605040;font-style:italic}
 .gl{width:120px;height:1px;background:linear-gradient(to right,transparent,#c9a84c,transparent);margin:1.5rem auto}
-.cards{position:relative;z-index:10;display:flex;gap:2rem;padding:1rem 2rem 3rem;max-width:860px;margin:0 auto;width:100%;flex-wrap:wrap;justify-content:center}
+.cards{position:relative;z-index:10;display:flex;gap:2rem;padding:1rem 2rem 2rem;max-width:860px;margin:0 auto;width:100%;flex-wrap:wrap;justify-content:center}
 .card{flex:1;min-width:280px;max-width:380px;border-radius:16px;padding:2.5rem 2rem;text-decoration:none;transition:transform .35s,box-shadow .35s;text-align:center}
 .card:hover{transform:translateY(-10px)}
 .cm{background:linear-gradient(145deg,#1c1c35,#141428);border:1px solid #c9a84c30;box-shadow:0 4px 24px rgba(201,168,76,.08)}
@@ -40,8 +40,17 @@ header{position:relative;z-index:10;text-align:center;padding:2rem 2rem 1rem}
 .cm:hover .cc{background:#c9a84c;color:#0f0f1a}
 .cb .cc{border:1px solid #7cb978;color:#7cb978}
 .cb:hover .cc{background:#7cb978;color:#0f0f1a}
+.source-section{position:relative;z-index:10;max-width:860px;margin:0 auto;width:100%;padding:0 2rem 2.5rem}
+.source-box{border:1px solid #c9a84c22;border-radius:12px;padding:20px 28px;background:#c9a84c08;display:flex;align-items:flex-start;gap:16px}
+.source-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.source-content{}
+.source-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#6a5a3a;margin-bottom:4px}
+.source-title{color:#c9a84c;font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:4px}
+.source-desc{font-size:.88rem;color:#7a6a4a;line-height:1.6}
+.source-desc a{color:#c9a84c;text-decoration:none;border-bottom:1px solid #c9a84c44}
+.source-desc a:hover{border-bottom-color:#c9a84c;color:#f0d080}
 footer{position:relative;z-index:10;text-align:center;padding:1.5rem;color:#3a2e22;font-size:.85rem;margin-top:auto}
-@media(max-width:600px){.cards{flex-direction:column;align-items:center}.card{max-width:100%}}
+@media(max-width:600px){.cards{flex-direction:column;align-items:center}.card{max-width:100%}.source-box{flex-direction:column;gap:8px}}
 </style>
 </head>
 <body>
@@ -74,14 +83,24 @@ footer{position:relative;z-index:10;text-align:center;padding:1.5rem;color:#3a2e
     <span class="cc" id="bookc">Read →</span>
   </a>
 </section>
+<div class="source-section">
+  <div class="source-box">
+    <div class="source-icon">📚</div>
+    <div class="source-content">
+      <div class="source-label" id="src-label">Primary Source</div>
+      <div class="source-title" id="src-title">Original Testimony Book</div>
+      <p class="source-desc" id="src-desc">The Hazanov family story appears on <strong>pages 134–151</strong> of the original published testimony collection. &nbsp;<a href="https://online.fliphtml5.com/zvlih/slue/#p=134" target="_blank" rel="noopener">Read pages 134–151 →</a></p>
+    </div>
+  </div>
+</div>
 <footer id="foot">Mariupol, Ukraine · 1941 · In memoriam</footer>
 <script>
 const sc=document.getElementById('sc');
 for(let i=0;i<120;i++){const s=document.createElement('div');s.className='star';const sz=(Math.random()*2.5+.4).toFixed(1);s.style.cssText=`width:${sz}px;height:${sz}px;left:${(Math.random()*100).toFixed(1)}%;top:${(Math.random()*100).toFixed(1)}%;--d:${(Math.random()*3+2).toFixed(1)}s;--dl:${(Math.random()*4).toFixed(1)}s`;sc.appendChild(s);}
 const T={
-  en:{mt:'Hazanov Family',sd:'Mariupol · 1941',ml:'In memory of those who did not survive',memt:'Family Memorial',memd:'The full story of tragedy, courage, and those who helped them survive.',memc:'Enter →',bookt:"Children's Book",bookd:'A story for children — about a brave family and the importance of remembering.',bookc:'Read →',foot:'Mariupol, Ukraine · 1941 · In memoriam',dir:'ltr'},
-  ru:{mt:'Семья Хазановых',sd:'Мариуполь · 1941',ml:'В память о тех, кто не выжил',memt:'Семейный мемориал',memd:'Полная история трагедии, мужества и людей, помогших им выжить.',memc:'Войти →',bookt:'Детская книга',bookd:'История для детей — о смелой семье и важности памяти.',bookc:'Читать →',foot:'Мариуполь, Украина · 1941 · В память',dir:'ltr'},
-  he:{mt:'משפחת חזנוב',sd:'מריופול · 1941',ml:'לזכר אלה שלא שרדו',memt:'אנדרטת המשפחה',memd:'הסיפור המלא של הטרגדיה, האומץ, ואנשים שעזרו להם לשרוד.',memc:'← כניסה',bookt:'ספר לילדים',bookd:'סיפור לילדים — על משפחה אמיצה וחשיבות הזיכרון.',bookc:'← קרא',foot:'מריופול, אוקראינה · 1941 · לזכרם',dir:'rtl'}
+  en:{mt:'Hazanov Family',sd:'Mariupol · 1941',ml:'In memory of those who did not survive',memt:'Family Memorial',memd:'The full story of tragedy, courage, and those who helped them survive.',memc:'Enter →',bookt:"Children's Book",bookd:'A story for children — about a brave family and the importance of remembering.',bookc:'Read →',foot:'Mariupol, Ukraine · 1941 · In memoriam','src-label':'Primary Source','src-title':'Original Testimony Book','src-desc':'The Hazanov family story appears on <strong>pages 134–151</strong> of the original published testimony collection. &nbsp;<a href="https://online.fliphtml5.com/zvlih/slue/#p=134" target="_blank" rel="noopener">Read pages 134–151 →</a>',dir:'ltr'},
+  ru:{mt:'Семья Хазановых',sd:'Мариуполь · 1941',ml:'В память о тех, кто не выжил',memt:'Семейный мемориал',memd:'Полная история трагедии, мужества и людей, помогших им выжить.',memc:'Войти →',bookt:'Детская книга',bookd:'История для детей — о смелой семье и важности памяти.',bookc:'Читать →',foot:'Мариуполь, Украина · 1941 · В память','src-label':'Первоисточник','src-title':'Оригинальная книга свидетельств','src-desc':'История семьи Хазановых опубликована на <strong>страницах 134–151</strong> оригинального сборника свидетельств. &nbsp;<a href="https://online.fliphtml5.com/zvlih/slue/#p=134" target="_blank" rel="noopener">Читать стр. 134–151 →</a>',dir:'ltr'},
+  he:{mt:'משפחת חזנוב',sd:'מריופול · 1941',ml:'לזכר אלה שלא שרדו',memt:'אנדרטת המשפחה',memd:'הסיפור המלא של הטרגדיה, האומץ, ואנשים שעזרו להם לשרוד.',memc:'← כניסה',bookt:'ספר לילדים',bookd:'סיפור לילדים — על משפחה אמיצה וחשיבות הזיכרון.',bookc:'← קרא',foot:'מריופול, אוקראינה · 1941 · לזכרם','src-label':'מקור ראשוני','src-title':'ספר העדויות המקורי','src-desc':'סיפור משפחת חזנוב מופיע ב<strong>עמודים 134–151</strong> של קובץ העדויות המקורי. &nbsp;<a href="https://online.fliphtml5.com/zvlih/slue/#p=134" target="_blank" rel="noopener">← קרא עמודים 134–151</a>',dir:'rtl'}
 };
 function setLang(l,btn){
   const d=T[l];
@@ -89,7 +108,11 @@ function setLang(l,btn){
   document.documentElement.lang=l;
   document.querySelectorAll('.lb').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
-  Object.keys(d).forEach(k=>{if(k==='dir')return;const el=document.getElementById(k);if(el)el.textContent=d[k];});
+  Object.keys(d).forEach(k=>{
+    if(k==='dir')return;
+    const el=document.getElementById(k);
+    if(el)el.innerHTML=d[k];
+  });
   localStorage.setItem('hlang',l);
 }
 const sv=localStorage.getItem('hlang')||'en';
